@@ -1,0 +1,48 @@
+@import './variables';
+
+.add_blog {
+  position: relative;
+  width: 100%;
+  box-shadow: -5px 7px 15px rgba(black, 0.05);
+  background: var(--bg-nav);
+  padding: 30px 20px;
+  margin-top: 20px;
+  header {
+    width: 100%;
+    padding: 10px 0;
+    @include flexBox(center, flex-end);
+    i {
+      color: var(--color-primary);
+      font-size: var(--font-big);
+      cursor: pointer;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+  form {
+    input,
+    textarea {
+      margin-top: 5px;
+      margin-bottom: 20px;
+      width: 100%;
+      border: none;
+      border-radius: 4px;
+      padding: 0 20px;
+      color: var(--color-primary);
+      font-size: var(--font-middle);
+      background: var(--bg-secondary);
+      &:is(input) {
+        height: 50px;
+      }
+      &:is(textarea) {
+        resize: vertical;
+      }
+    }
+    [data-form-btns] {
+      @include flexBox(center, flex-start);
+      gap: 20px;
+    }
+  }
+}

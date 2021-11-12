@@ -1,0 +1,15 @@
+@import './variables';
+
+.blogs {
+  position: relative;
+  [data-blogs-header] {
+    div {
+      @include flexBox(flex-start, space-between);
+    }
+  }
+  [data-blogs] {
+    padding-top: 3rem;
+    @include flexBox(flex-start, flex-start, column);
+    gap: 2.5em;
+  }
+}

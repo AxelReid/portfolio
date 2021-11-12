@@ -1,0 +1,211 @@
+@import './variables.scss';
+
+.nav {
+  position: relative;
+  box-shadow: -5px 7px 15px rgba(black, 0.05);
+  &,
+  nav {
+    background: var(--bg-nav);
+    border-radius: 6px;
+  }
+  padding: 0 20px;
+  margin-bottom: Max(70px, 8%);
+  height: 70px;
+  @include flexBox(center, space-between);
+  [data-header-logo] {
+    @include flexBox;
+    gap: 15px;
+    span {
+      display: none;
+      font-size: var(--font-middle);
+      color: var(--color-primary);
+      cursor: pointer;
+      transform: translateY(2px);
+    }
+    h3 {
+      a {
+        color: var(--color-primary);
+        font-size: var(--font-big);
+      }
+    }
+  }
+  a {
+    font-size: var(--font-middle);
+    color: var(--color-secondary);
+  }
+  ul {
+    @include flexBox;
+    gap: 25px;
+    li {
+      &[data-active='active'] {
+        a {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  aside {
+    position: relative;
+    height: calc(100% - 36px);
+    @include flexBox;
+    button {
+      border-radius: 6px;
+      border: none;
+      height: 100%;
+      font-size: var(--font-small);
+      font-weight: 600;
+      &[data-name='join'] {
+        color: white;
+        aspect-ratio: 2 / 1.2;
+        margin-right: 10px;
+        background: var(--color-blue);
+      }
+      &[data-name='theme'] {
+        background: var(--bg-third);
+        aspect-ratio: 1;
+        color: var(--color-primary);
+      }
+    }
+  }
+  nav {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    padding: 20px;
+    top: calc(100% + 20px);
+    right: 0;
+    filter: drop-shadow(-5px 5px 15px rgba(black, 0.05));
+    z-index: var(--z-index-1);
+    &:before {
+      position: absolute;
+      top: -20px;
+      right: 80px;
+      content: '';
+      border: 10px solid transparent;
+      border-bottom-color: var(--bg-nav);
+    }
+  }
+  @media (max-width: 700px) {
+    [data-header-logo] {
+      span {
+        display: block;
+      }
+    }
+    ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--bg-nav);
+      border-radius: 0 0 6px 6px;
+      z-index: var(--z-index-1);
+      @include flexBox(flex-start, flex-start, column);
+      display: none;
+      gap: 5px;
+      padding: 10px 20px 15px 20px;
+      box-shadow: -5px 7px 15px rgba(black, 0.05);
+      li {
+        width: 100%;
+        a {
+          padding: 10px 0;
+          display: block;
+          transition: color 0.2s;
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+    &[data-menu='open'] {
+      border-radius: 6px 6px 0 0;
+      ul {
+        display: flex;
+      }
+    }
+  }
+}
+
+.hero {
+  [data-user] {
+    margin-top: Max(70px, 8%);
+    @include flexBox(center, space-between);
+    [data-userinfo] {
+      p {
+        &:last-child {
+          margin-top: 30px;
+        }
+      }
+    }
+    [data-pic] {
+      overflow: hidden;
+      border-radius: 50%;
+    }
+  }
+  [data-walkthrough] {
+    position: relative;
+    margin-top: Max(100px, 10%);
+    h2 {
+      margin-bottom: 50px;
+    }
+    [data-timespam] {
+      position: relative;
+      &:before {
+        position: absolute;
+        content: '';
+        top: 10px;
+        left: 9px;
+        width: 2px;
+        height: calc(100% - 20px);
+        background: var(--color-light);
+      }
+      h3 {
+        position: relative;
+        margin: 50px 0;
+        font-size: var(--font-middle);
+        color: var(--color-secondary);
+        padding-left: Max(40px, 7%);
+        @include flexBox(center, flex-start);
+        &:before {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background: var(--color-light);
+          width: 20px;
+          aspect-ratio: 1;
+          border-radius: 50%;
+        }
+      }
+    }
+    section {
+      position: absolute;
+      z-index: -1;
+      bottom: -50px;
+      right: 0;
+      @include flexBox(initial, initial, column);
+      gap: 10px;
+      div {
+        filter: drop-shadow(-1px -1px white);
+        position: relative;
+        aspect-ratio: 1;
+        width: 120px;
+        &:nth-child(1) {
+          transform: translate(-10rem, 2rem);
+          width: 150px;
+        }
+        &:nth-child(2) {
+          filter: none;
+        }
+        &:nth-child(3) {
+          transform: translate(-6rem, 0);
+          filter: none;
+        }
+        &:nth-child(5) {
+          transform: translate(-10rem, -2rem);
+          filter: var(--invert);
+        }
+      }
+    }
+  }
+}

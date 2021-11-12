@@ -1,0 +1,13 @@
+@mixin flexBox($align: center, $justify: center, $dir: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $dir;
+}
+@mixin background($col) {
+  background: radial-gradient(
+    circle at 100% 100%,
+    var($col) 40%,
+    var(--bg-primary)
+  );
+}

@@ -1,0 +1,27 @@
+@import './variables';
+
+.not_found {
+  width: 100%;
+  height: 100vh;
+  @include flexBox(center, center, column);
+  gap: Min(100px, 3%);
+  div {
+    width: 100%;
+    @include flexBox();
+    gap: Clamp(30px, 3vw, 7rem);
+    h1 {
+      color: var(--color-light);
+      font-size: Clamp(7rem, 10vw, 14rem);
+    }
+    p {
+      color: var(--color-light);
+      font-size: Clamp(1.5rem, 2vw, 2rem);
+    }
+  }
+  a {
+    color: var(--color-secondary);
+    text-decoration: underline;
+    font-size: 1.1rem;
+    font-size: Clamp(1rem, 1.2vw, 1.5rem);
+  }
+}

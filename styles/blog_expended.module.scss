@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap');
+
+@import './variables';
+
+.blog_expended {
+  position: relative;
+  article {
+    margin-top: 2em;
+    @include flexBox(center, flex-start);
+    gap: 10px;
+    [data-pic] {
+      position: relative;
+      width: 35px;
+      border-radius: 50%;
+      overflow: hidden;
+      aspect-ratio: 1;
+    }
+  }
+  [data-blog-img-big] {
+    position: relative;
+    width: Min(850px, 100%);
+    aspect-ratio: 2/1.2;
+    background-color: var(--bg-nav);
+    margin-bottom: 20px;
+  }
+
+  [data-mdx-wrapper] {
+    padding: Clamp(45px, 3vw, 4em) 0;
+    p {
+      font-size: var(--font-middle);
+    }
+    * {
+      line-height: 2;
+    }
+    code {
+      border-radius: 0.5em;
+      background: #111;
+      color: white;
+      padding: 0.5em 0.75em;
+    }
+  }
+}
