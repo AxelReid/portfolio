@@ -47,8 +47,8 @@ export const initialData = {
     },
     {
       id: 2,
-      href: '/say',
-      name: 'Say something',
+      href: '/dashboard',
+      name: 'Dashboard',
     },
   ],
 }

@@ -26,13 +26,11 @@ export async function getStaticProps({ params: { blog_id } }) {
 
 const components = {
   Image,
-  CustomImage: dynamic(() =>
-    import('@/components/blogs/dynamicComponents/CustomImage')
-  ),
+  CustomImage: dynamic(() => import('@/components/CustomImage')),
 }
 
 const Blog = ({ blog }) => {
-  const { compiledSource: source, scope: frontMatter } = blog
+  const { scope: frontMatter } = blog
   return (
     <Component title='A blog' desc='The blog desciption'>
       <div className={style.blog_expended}>

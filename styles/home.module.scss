@@ -147,64 +147,65 @@
     h2 {
       margin-bottom: 50px;
     }
-    [data-timespam] {
-      position: relative;
-      &:before {
-        position: absolute;
-        content: '';
-        top: 10px;
-        left: 9px;
-        width: 2px;
-        height: calc(100% - 20px);
-        background: var(--color-light);
-      }
-      h3 {
-        position: relative;
-        margin: 50px 0;
-        font-size: var(--font-middle);
-        color: var(--color-secondary);
-        padding-left: Max(40px, 7%);
-        @include flexBox(center, flex-start);
-        &:before {
-          position: absolute;
-          content: '';
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          background: var(--color-light);
-          width: 20px;
-          aspect-ratio: 1;
-          border-radius: 50%;
-        }
+    [data-timeline-wrapper] {
+      [data-timeline-year] {
+        margin: 15px 0;
       }
     }
     section {
       position: absolute;
       z-index: -1;
-      bottom: -50px;
+      top: -60px;
       right: 0;
       @include flexBox(initial, initial, column);
       gap: 10px;
       div {
         filter: drop-shadow(-1px -1px white);
         position: relative;
-        aspect-ratio: 1;
         width: 120px;
-        &:nth-child(1) {
-          transform: translate(-10rem, 2rem);
-          width: 150px;
-        }
-        &:nth-child(2) {
+        &[data-react] {
+          transform: translate(-10em, 0);
           filter: none;
         }
-        &:nth-child(3) {
-          transform: translate(-6rem, 0);
+        &[data-express] {
           filter: none;
         }
-        &:nth-child(5) {
-          transform: translate(-10rem, -2rem);
+        &[data-mongodb] {
+          width: 130px;
+        }
+        &[data-nodejs] {
+          transform: translate(-8em, 2em);
+          width: 130px;
+        }
+        &[data-nextjs] {
+          transform: translate(-9em, 0);
           filter: var(--invert);
+          width: 130px;
         }
+      }
+    }
+  }
+}
+
+.certifications {
+  position: relative;
+  margin-top: Max(130px, 10%);
+  h1 {
+    margin-bottom: Min(30px, 5vw);
+  }
+  .certification {
+    &:not(:first-of-type) {
+      margin-top: 30px;
+    }
+    & > div {
+      width: Min(700px, 100%);
+    }
+    p {
+      margin-top: 10px;
+      color: var(--color-primary);
+      a {
+        color: var(--color-blue);
+        font-weight: 600;
       }
     }
   }
