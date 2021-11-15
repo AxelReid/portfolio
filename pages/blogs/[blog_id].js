@@ -37,7 +37,7 @@ const Blog = ({ blog }) => {
         <h1 className='big-title'>{frontMatter.title}</h1>
         <article>
           <div data-pic>
-            <Image src={Pic}></Image>
+            <Image src={Pic} alt='profile image'></Image>
           </div>
           <p>Anvarbekov Asilbek - Nov 9, 2021</p>
         </article>

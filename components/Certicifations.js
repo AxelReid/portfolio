@@ -39,7 +39,8 @@ const Certicifations = () => {
             />
           </div>
           <p>
-            Verify this Proof of Completion by visiting <a href='/'>{link}</a>
+            Verify this Proof of Completion by visiting{' '}
+            <a href={link}>{link}</a>
           </p>
         </div>
       ))}

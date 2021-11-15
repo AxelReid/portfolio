@@ -16,6 +16,7 @@ const Item = React.memo(
                 height={y || 20}
                 layout='responsive'
                 priority
+                alt='image'
               />
             </div>
             <h3>{title}</h3>
@@ -27,4 +28,5 @@ const Item = React.memo(
   }
 )
 
+Item.displayName = 'Item'
 export default Item

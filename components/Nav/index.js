@@ -1,11 +1,11 @@
-import React, { useCallback, useEffect, useReducer } from 'react'
+import React, { useCallback, useEffect, useReducer, memo } from 'react'
 import Link from 'next/link'
 import style from 'styles/home.module.scss'
 import { FaMoon, FaSun, FaTimes, FaBars } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 import { reducer, initialData } from './manage.js'
 
-const Nav = React.memo(() => {
+const Nav = memo(() => {
   const router = useRouter()
   const [nav_data, dispatchData] = useReducer(reducer, initialData)
 
@@ -68,4 +68,5 @@ const Nav = React.memo(() => {
   )
 })
 
+Nav.displayName = 'Nav'
 export default Nav

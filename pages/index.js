@@ -30,7 +30,12 @@ export default function Home() {
             <p>Senior front-end, middle back-end full stack web developer</p>
           </div>
           <div data-pic>
-            <Image width='150' height='150' src={Pic}></Image>
+            <Image
+              width='150'
+              height='150'
+              alt='profile image'
+              src={Pic}
+            ></Image>
           </div>
         </div>
         <div data-walkthrough>
@@ -49,19 +54,24 @@ export default function Home() {
           </div>
           <section>
             <div data-nextjs>
-              <Image layout='responsive' src={NextJs}></Image>
+              <Image layout='responsive' src={NextJs} alt='nextjs'></Image>
             </div>
             <div data-express>
-              <Image layout='responsive' src={Express}></Image>
+              <Image layout='responsive' src={Express} alt='expressjs'></Image>
             </div>
             <div data-nodejs>
-              <Image layout='responsive' src={NodeJs}></Image>
+              <Image layout='responsive' src={NodeJs} alt='nodejs'></Image>
             </div>
             <div data-mongodb>
-              <Image layout='responsive' src={Mongodb} priority></Image>
+              <Image
+                layout='responsive'
+                src={Mongodb}
+                alt='mongodb'
+                priority
+              ></Image>
             </div>
             <div data-react>
-              <Image layout='responsive' src={ReactJs}></Image>
+              <Image layout='responsive' src={ReactJs} alt='reactjs'></Image>
             </div>
           </section>
         </div>

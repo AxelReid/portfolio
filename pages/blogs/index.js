@@ -18,7 +18,7 @@ const index = ({ blogs }) => {
           <div>
             <h1 className='big-title'>Blogs</h1>
           </div>
-          <p>Thoughts on what i'm building and learning.</p>
+          <p>Thoughts on what i`m building and learning.</p>
         </div>
         <div data-blogs>
           {blogs.map((blog) => (
