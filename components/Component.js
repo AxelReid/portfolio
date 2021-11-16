@@ -36,10 +36,14 @@ const Component = ({ children, title, desc }) => {
             </Link>
           </ul>
           <ul>
-            <a target='_blank' href='https://t.me/Rvse7en'>
+            <a target='_blank' rel='noreferrer' href='https://t.me/Rvse7en'>
               <p>Telegram</p>
             </a>
-            <a target='_blank' href='https://github.com/AxelReid'>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://github.com/AxelReid'
+            >
               <p>Github</p>
             </a>
           </ul>
