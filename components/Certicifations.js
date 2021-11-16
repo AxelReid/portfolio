@@ -11,14 +11,14 @@ const certifications = [
     image: ProofM001,
     width: 500,
     height: 380,
-    link: 'https://university.mongodb.com',
+    link: 'https://university.mongodb.com/course_completion/814b5a40-5476-4a32-9a80-6f6ea696d1db',
   },
   {
     id: 1,
     image: ProofM220,
     width: 500,
     height: 380,
-    link: 'https://university.mongodb.com',
+    link: 'https://university.mongodb.com/course_completion/e6bba0a8-2761-419f-837e-758b5f64217f',
   },
 ]
 
@@ -36,11 +36,14 @@ const Certicifations = () => {
               layout='responsive'
               placeholder='blur'
               priority
+              alt='image'
             />
           </div>
           <p>
             Verify this Proof of Completion by visiting{' '}
-            <a href={link}>{link}</a>
+            <a target='_blank' href={link}>
+              {link}
+            </a>
           </p>
         </div>
       ))}

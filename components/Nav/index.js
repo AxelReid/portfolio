@@ -25,7 +25,7 @@ const Nav = memo(() => {
 
   const themeSwitch = () => {
     const attr = document.body.getAttribute('id')
-    const val = attr === '' ? 'dark' : ''
+    const val = attr === '' ? 'light' : ''
     document.body.setAttribute('id', val)
     localStorage.setItem('theme', val)
     dispatch('THEME', val)
@@ -60,7 +60,7 @@ const Nav = memo(() => {
           {nav_data.nav_open ? <FaTimes /> : 'Join'}
         </button>
         <button data-name='theme' onClick={themeSwitch}>
-          {nav_data.theme === '' ? <FaMoon /> : <FaSun />}
+          {nav_data.theme === '' ? <FaSun /> : <FaMoon />}
         </button>
       </aside>
       {nav_data.nav_open && <nav></nav>}

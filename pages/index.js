@@ -40,6 +40,7 @@ export default function Home() {
         </div>
         <div data-walkthrough>
           <h2>Timeline</h2>
+          <p>Quick demonstration of my programming walkthrough</p>
           <div data-timeline-wrapper>
             {data.timeline.map((line) => (
               <div key={line.year}>
@@ -53,16 +54,16 @@ export default function Home() {
             ))}
           </div>
           <section>
-            <div data-nextjs>
+            <div data-nextjs className='filter -invert'>
               <Image layout='responsive' src={NextJs} alt='nextjs'></Image>
             </div>
             <div data-express>
               <Image layout='responsive' src={Express} alt='expressjs'></Image>
             </div>
-            <div data-nodejs>
+            <div data-nodejs className='filter -shadow'>
               <Image layout='responsive' src={NodeJs} alt='nodejs'></Image>
             </div>
-            <div data-mongodb>
+            <div data-mongodb className='filter -shadow'>
               <Image
                 layout='responsive'
                 src={Mongodb}

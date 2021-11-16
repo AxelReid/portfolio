@@ -24,7 +24,7 @@ export const defaultState = {
       data: [
         {
           id: 1,
-          title: 'React Js, Sass, Styles-components, Framer-motion',
+          title: 'React Js, some UI tools',
           desc: 'After alot of strugle, i could build any front-end web application',
         },
         {
@@ -40,7 +40,7 @@ export const defaultState = {
         {
           id: 4,
           title: 'MongoDB',
-          desc: 'I have been taking official courses and got some certifications',
+          desc: 'I have been taking the official courses and got some certifications',
         },
         {
           id: 5,

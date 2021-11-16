@@ -1,0 +1,17 @@
+@import './variables';
+
+#tech_wrapper {
+  position: relative;
+  width: 100%;
+  & > h2 {
+    margin-bottom: 20px;
+    // color: var(--color-secondary);
+  }
+  section {
+    position: relative;
+    width: 100%;
+    @include flexBox;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
