@@ -22,24 +22,24 @@ const Component = ({ children, title, desc }) => {
         </h3>
         <section>
           <ul>
-            <Link href='/'>
+            <Link href='/' passHref={true}>
               <p>Home</p>
             </Link>
-            <Link href='/about'>
+            <Link href='/about' passHref={true}>
               <p>About</p>
             </Link>
-            <Link href='/blogs'>
+            <Link href='/blogs' passHref={true}>
               <p>Blogs</p>
             </Link>
-            <Link href='/projects'>
+            <Link href='/projects' passHref={true}>
               <p>Projects</p>
             </Link>
           </ul>
           <ul>
-            <a href='https://t.me/Rvse7en'>
+            <a target='_blank' href='https://t.me/Rvse7en'>
               <p>Telegram</p>
             </a>
-            <a href='https://github.com/AxelReid'>
+            <a target='_blank' href='https://github.com/AxelReid'>
               <p>Github</p>
             </a>
           </ul>

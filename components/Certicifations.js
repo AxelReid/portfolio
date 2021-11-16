@@ -41,7 +41,7 @@ const Certicifations = () => {
           </div>
           <p>
             Verify this Proof of Completion by visiting{' '}
-            <a target='_blank' href={link}>
+            <a target='_blank' rel='noreferrer' href={link}>
               {link}
             </a>
           </p>

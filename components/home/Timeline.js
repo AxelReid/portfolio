@@ -19,6 +19,7 @@ const Timeline = ({ img, x = 70, y = 70, title, desc, className = '' }) => {
               height={y}
               layout='responsive'
               priority
+              alt='logo'
             ></Image>
           </div>
         ) : (
