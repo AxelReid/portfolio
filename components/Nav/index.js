@@ -60,7 +60,7 @@ const Nav = memo(() => {
           {nav_data.nav_open ? <FaTimes /> : 'Join'}
         </button>
         <button data-name='theme' onClick={themeSwitch}>
-          {nav_data.theme === '' ? <FaSun /> : <FaMoon />}
+          {nav_data.theme ? <FaMoon /> : <FaSun />}
         </button>
       </aside>
       {nav_data.nav_open && <nav></nav>}

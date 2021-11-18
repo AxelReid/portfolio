@@ -127,7 +127,6 @@
 
 .hero {
   [data-user] {
-    margin-top: Max(70px, 8%);
     @include flexBox(center, space-between);
     flex-wrap: wrap;
     gap: 30px;
@@ -145,12 +144,7 @@
   }
   [data-walkthrough] {
     position: relative;
-    margin-top: Max(100px, 10%);
-    h2 {
-      margin-bottom: 10px;
-    }
     [data-timeline-wrapper] {
-      margin-top: 50px;
       [data-timeline-year] {
         margin: 15px 0;
       }
@@ -165,7 +159,7 @@
       div {
         position: relative;
         width: 120px;
-        &[data-react] {
+        &[data-express] {
           transform: translate(-10em, 0);
         }
         &[data-mongodb] {
@@ -188,13 +182,139 @@
   }
 }
 
-.certifications {
+#projects {
   position: relative;
-  margin-top: Max(130px, 10%);
-  h1 {
-    margin-bottom: Min(30px, 5vw);
+  h3 {
+    z-index: var(--z-index-1);
+    display: inline-block;
   }
-  .certification {
+  > section {
+    position: relative;
+    width: 100%;
+    @include flexBox(flex-start, flex-start);
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  > aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    z-index: var(--z-index-1);
+    overflow-y: auto;
+    > div {
+      height: 100%;
+    }
+  }
+  [data-expand-back] {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(black, 0.5);
+    z-index: var(--z-index-2);
+    backdrop-filter: blur(4px);
+  }
+  #project {
+    position: relative;
+    width: 100%;
+    @include flexBox(flex-start, flex-start);
+    padding: 20px;
+
+    > div:nth-child(1) {
+      position: relative;
+      min-width: 250px;
+      max-width: 250px;
+    }
+    article {
+      position: relative;
+      overflow: hidden;
+      padding-left: 20px;
+      a {
+        font-size: var(--font-middle);
+        text-decoration: underline;
+        font-weight: 600;
+        color: var(--color-blue);
+      }
+      p {
+        margin-top: 10px;
+      }
+    }
+    button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      font-size: var(--font-middle);
+      background: var(--bg-fourth);
+      color: var(--color-secondary);
+    }
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 20px;
+      > div:nth-child(1) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+      article {
+        padding: 0;
+      }
+    }
+  }
+  > aside {
+    #project {
+      background: var(--bg-nav);
+      @include flexBox(flex-start, flex-start, column);
+      gap: 20px;
+      header {
+        width: 100%;
+        position: relative;
+        @include flexBox(center, space-between);
+        button {
+          position: relative;
+          bottom: 0;
+          right: 0;
+          border: 1px solid var(--bg-fifth);
+          background: var(--bg-third);
+        }
+      }
+      [data-project-img] {
+        position: relative;
+        min-width: 100%;
+        max-width: 100%;
+      }
+      article {
+        padding: 0;
+      }
+    }
+  }
+}
+
+#someProjects {
+  position: relative;
+  width: 100%;
+  > h4 {
+    width: max-content;
+    margin-top: 20px;
+    font-size: var(--font-big);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-secondary);
+    cursor: pointer;
+    transition: color 0.3s;
+    &:hover {
+      color: var(--color-blue);
+    }
+  }
+}
+
+#certifications {
+  position: relative;
+  #certification {
     &:not(:first-of-type) {
       margin-top: 30px;
     }
@@ -204,11 +324,7 @@
     p {
       margin-top: 10px;
       color: var(--color-primary);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
+      line-height: 1.4;
       a {
         color: var(--color-blue);
         font-weight: 600;

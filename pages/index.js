@@ -1,9 +1,11 @@
 import { useCallback, useReducer } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import style from 'styles/home.module.scss'
 import Certicifations from '@/components/Certicifations'
 import Component from '@/components/Component'
 import { reducer, defaultState } from '@/components/home/data'
+import { FaLongArrowAltRight } from 'react-icons/fa'
 
 import Pic from 'public/images/pic.jpg'
 import Mongodb from 'public/images/mongodb.png'
@@ -12,10 +14,11 @@ import ReactJs from 'public/images/react.png'
 import NodeJs from 'public/images/node.png'
 import NextJs from 'public/images/next.png'
 import Timeline from '@/components/home/Timeline'
+import Projects from '@/components/Projects'
 
 export default function Home() {
   const [data, dispatchData] = useReducer(reducer, defaultState)
-
+  const someProjects = [data.projects[0], data.projects[1], data.projects[2]]
   const dispatch = useCallback((type, payload) => {
     dispatchData({ type: type, payload: payload })
   }, [])
@@ -38,10 +41,10 @@ export default function Home() {
             ></Image>
           </div>
         </div>
-        <div data-walkthrough>
-          <h2>Timeline</h2>
+        <div data-walkthrough className='mt-section'>
+          <h2 className='mb-10'>Timeline</h2>
           <p>Quick demonstration of my programming walkthrough</p>
-          <div data-timeline-wrapper>
+          <div data-timeline-wrapper className='mt-50'>
             {data.timeline.map((line) => (
               <div key={line.year}>
                 <h3 data-timeline-year>{line.year}</h3>
@@ -57,8 +60,8 @@ export default function Home() {
             <div data-nextjs className='filter -invert'>
               <Image layout='responsive' src={NextJs} alt='nextjs'></Image>
             </div>
-            <div data-express>
-              <Image layout='responsive' src={Express} alt='expressjs'></Image>
+            <div data-react>
+              <Image layout='responsive' src={ReactJs} alt='reactjs'></Image>
             </div>
             <div data-nodejs className='filter -shadow'>
               <Image layout='responsive' src={NodeJs} alt='nodejs'></Image>
@@ -71,13 +74,29 @@ export default function Home() {
                 priority
               ></Image>
             </div>
-            <div data-react>
-              <Image layout='responsive' src={ReactJs} alt='reactjs'></Image>
+            <div data-express>
+              <Image layout='responsive' src={Express} alt='expressjs'></Image>
             </div>
           </section>
         </div>
       </section>
-      <Certicifations />
+      <section className='mt-section' id={style.someProjects}>
+        <h2 className='mb-10'>Projects</h2>
+        <p>
+          To see more project, navigate to{' '}
+          <span className='link'>
+            <Link href='/projects' className='link'>
+              projects
+            </Link>
+          </span>{' '}
+          page
+        </p>
+        <Projects projects={someProjects} />
+        <Link href='/projects'>
+          <h4>. . . more projects</h4>
+        </Link>
+      </section>
+      <Certicifations certifications={data.certifications} />
     </Component>
   )
 }

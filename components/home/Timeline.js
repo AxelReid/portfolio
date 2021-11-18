@@ -8,13 +8,14 @@ const Timeline = ({ img, x = 70, y = 70, title, desc, className = '' }) => {
     <div
       id={style.timeline}
       data-line={img ? 'no' : 'yes'}
-      className='radius-light shadow'
+      className='radius-light shadow card-glass'
     >
       <i>
         {img ? (
           <div className={className}>
             <Image
               src={img}
+              placeholder='blur'
               width={x}
               height={y}
               layout='responsive'
@@ -28,7 +29,7 @@ const Timeline = ({ img, x = 70, y = 70, title, desc, className = '' }) => {
       </i>
       <article>
         <h3>{title}</h3>
-        <p>{desc}</p>
+        <p className='cut-line -at-2'>{desc}</p>
       </article>
     </div>
   )

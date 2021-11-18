@@ -2,32 +2,13 @@ import React from 'react'
 import Image from 'next/image'
 import style from '@/styles/home.module.scss'
 
-import ProofM001 from 'public/assets/mongodb/M001_proof_of_completion.jpeg'
-import ProofM220 from 'public/assets/mongodb/M220JS_proof_of_completion.jpeg'
-
-const certifications = [
-  {
-    id: 0,
-    image: ProofM001,
-    width: 500,
-    height: 380,
-    link: 'https://university.mongodb.com/course_completion/814b5a40-5476-4a32-9a80-6f6ea696d1db',
-  },
-  {
-    id: 1,
-    image: ProofM220,
-    width: 500,
-    height: 380,
-    link: 'https://university.mongodb.com/course_completion/e6bba0a8-2761-419f-837e-758b5f64217f',
-  },
-]
-
-const Certicifations = () => {
+const Certicifations = ({ certifications }) => {
   return (
-    <div className={style.certifications}>
-      <h1 className='big-title'>Certifications</h1>
+    <div id={style.certifications} className='mt-section'>
+      <h2 className='mb-10'>Certifications</h2>
+      <p>Some online course completion proofs</p>
       {certifications.map(({ id, image, width, height, link }) => (
-        <div key={id} className={style.certification}>
+        <div key={id} id={style.certification} className='mt-50'>
           <div className='shadow radius-light'>
             <Image
               src={image}
@@ -39,7 +20,7 @@ const Certicifations = () => {
               alt='image'
             />
           </div>
-          <p>
+          <p className='cut-line -at-3'>
             Verify this Proof of Completion by visiting{' '}
             <a target='_blank' rel='noreferrer' href={link}>
               {link}

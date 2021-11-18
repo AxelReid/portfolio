@@ -4,7 +4,7 @@ import React from 'react'
 const index = () => {
   return (
     <Component title='Say to me' desc='Whatsoever good, say to me'>
-      <h1>Say something</h1>
+      <h1>Dashboard</h1>
     </Component>
   )
 }

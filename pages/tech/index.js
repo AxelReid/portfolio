@@ -93,7 +93,7 @@ const index = () => {
       <div id={style.tech_wrapper}>
         <h2>I use</h2>
         <section>
-          {techs.map((tech) => (
+          {techs.map((tech, i) => (
             <Timeline
               key={tech.id}
               img={tech.img}
