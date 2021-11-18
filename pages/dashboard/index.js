@@ -1,7 +1,7 @@
 import Component from '@/components/Component'
 import React from 'react'
 
-const index = () => {
+const Dashboard = () => {
   return (
     <Component title='Say to me' desc='Whatsoever good, say to me'>
       <h1>Dashboard</h1>
@@ -9,4 +9,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Dashboard

@@ -3,7 +3,7 @@ import Component from '@/components/Component'
 import Projects from '@/components/Projects'
 import { reducer, defaultState } from '@/components/home/data'
 
-const projects = () => {
+const Pprojects = () => {
   const [data, dispatchData] = useReducer(reducer, defaultState)
 
   return (
@@ -14,4 +14,4 @@ const projects = () => {
   )
 }
 
-export default projects
+export default Pprojects

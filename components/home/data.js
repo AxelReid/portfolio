@@ -98,7 +98,7 @@ export const defaultState = {
     {
       id: 2,
       title: 'Next JS + Framer Motions + Scss',
-      link: '/',
+      link: 'https://nextjs-framer-motion.vercel.app',
       imgs: [
         { id: 'img-1', img: Fm1 },
         { id: 'img-2', img: Fm2 },

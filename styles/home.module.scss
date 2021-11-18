@@ -238,6 +238,11 @@
         text-decoration: underline;
         font-weight: 600;
         color: var(--color-blue);
+        i {
+          margin-right: 8px;
+          font-size: calc(var(--font-middle) - 2px);
+          font-weight: 500;
+        }
       }
       p {
         margin-top: 10px;
@@ -289,6 +294,9 @@
       }
       article {
         padding: 0;
+        p {
+          display: inline-block;
+        }
       }
     }
   }

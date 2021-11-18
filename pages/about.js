@@ -1,7 +1,7 @@
 import Component from '@/components/Component'
 import React from 'react'
 
-const about = () => {
+const About = () => {
   return (
     <Component title='About' desc='Some information about myself'>
       <h1>About</h1>
@@ -9,4 +9,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About

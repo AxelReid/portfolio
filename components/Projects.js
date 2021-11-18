@@ -1,26 +1,24 @@
 import React, { useCallback, useState } from 'react'
 import Image from 'next/image'
 import style from 'styles/home.module.scss'
-import { FaAngleUp, FaTimes } from 'react-icons/fa'
+import { FaAngleUp, FaTimes, FaLink } from 'react-icons/fa'
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion'
 
 const Projects = ({ projects }) => {
   const [selected, setSelected] = useState(null)
-  const toggleExpand = useCallback(
-    (pr) => {
-      setSelected(pr)
-      if (!pr) {
-        const wait = setTimeout(() => {
-          document.body.style.overflowY = 'scroll'
-          document.body.style.paddingRight = '0px'
-        }, [200])
-        return () => clearTimeout(wait)
-      }
-      document.body.style.overflowY = 'hidden'
-      document.body.style.paddingRight = '10px'
-    },
-    [selected]
-  )
+
+  const toggleExpand = useCallback((pr) => {
+    setSelected(pr)
+    if (!pr) {
+      const wait = setTimeout(() => {
+        document.body.style.overflowY = 'scroll'
+        document.body.style.paddingRight = '0px'
+      }, [200])
+      return () => clearTimeout(wait)
+    }
+    document.body.style.overflowY = 'hidden'
+    document.body.style.paddingRight = '10px'
+  }, [])
 
   return (
     <section id={style.projects}>
@@ -116,7 +114,15 @@ const Project = ({ project, expanded, toggleExpand }) => {
             {title}
           </motion.h3>
         )}
-        <a href={link} target='_blank' className='cut-line -at-1'>
+        <a
+          href={link}
+          rel='noreferrer'
+          target='_blank'
+          className='cut-line -at-1'
+        >
+          <i>
+            <FaLink />
+          </i>
           {link}
         </a>
         <p className={expanded ? '' : 'cut-line -at-2'}>

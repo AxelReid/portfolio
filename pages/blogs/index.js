@@ -10,7 +10,7 @@ export async function getStaticProps() {
   }
 }
 
-const index = ({ blogs }) => {
+const Blogs = ({ blogs }) => {
   return (
     <Component title='Blogs' desc='Blogs on what i`m learning and developing'>
       <section className={styles.blogs}>
@@ -30,4 +30,4 @@ const index = ({ blogs }) => {
   )
 }
 
-export default index
+export default Blogs
