@@ -4,7 +4,7 @@ import React from 'react'
 const About = () => {
   return (
     <Component title='About' desc='Some information about myself'>
-      <h3>Hi, I'm Asilbek Anvarbekov</h3>
+      <h3>Hi, I am Asilbek Anvarbekov</h3>
       <br />
       <br />
       <p>
