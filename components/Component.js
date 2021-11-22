@@ -2,6 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Nav from './Nav'
+import { FaGithub, FaTelegram } from 'react-icons/fa'
+import { SiDuolingo } from 'react-icons/si'
 
 const Component = ({ children, title, desc }) => {
   return (
@@ -18,7 +20,7 @@ const Component = ({ children, title, desc }) => {
       {children}
       <footer>
         <h3>
-          Built in - <span>Next JS, Mdx, Scss</span>
+          Built in - <span>Next JS, Mdx, Scss, ...</span>
         </h3>
         <section>
           <ul>
@@ -28,23 +30,42 @@ const Component = ({ children, title, desc }) => {
             <Link href='/about' passHref={true}>
               <p>About</p>
             </Link>
-            <Link href='/blogs' passHref={true}>
+            {/* <Link href='/blogs' passHref={true}>
               <p>Blogs</p>
-            </Link>
+            </Link> */}
             <Link href='/projects' passHref={true}>
               <p>Projects</p>
             </Link>
           </ul>
           <ul>
             <a target='_blank' rel='noreferrer' href='https://t.me/Rvse7en'>
-              <p>Telegram</p>
+              <p>
+                <FaTelegram />
+                &nbsp;
+                <span>Telegram</span>
+              </p>
             </a>
             <a
               target='_blank'
               rel='noreferrer'
               href='https://github.com/AxelReid'
             >
-              <p>Github</p>
+              <p>
+                <FaGithub />
+                &nbsp;
+                <span>Github</span>
+              </p>
+            </a>
+            <a
+              href='https://www.duolingo.com/profile/Rvse7en'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <p>
+                <SiDuolingo />
+                &nbsp;
+                <span>Duolingo</span>
+              </p>
             </a>
           </ul>
           <ul></ul>

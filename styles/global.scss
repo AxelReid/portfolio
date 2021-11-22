@@ -8,6 +8,7 @@
   --bg-fourth: #313035;
   --bg-fifth: #262530;
   --bg-nav: #212025;
+  --bg-code-dracula: #282a36;
 
   --bg-home: #001f29;
   --bg-blogs: #270029;
@@ -253,6 +254,8 @@ footer {
       p {
         cursor: pointer;
         transition: color 0.3s;
+        @include flexBox;
+        gap: 3px;
         &:hover {
           color: var(--color-primary);
         }

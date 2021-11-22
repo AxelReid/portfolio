@@ -3,7 +3,15 @@ import Image from 'next/image'
 import style from '@/styles/timeline.module.scss'
 import { FiCheckCircle } from 'react-icons/fi'
 
-const Timeline = ({ img, x = 70, y = 70, title, desc, className = '' }) => {
+const Timeline = ({
+  img,
+  x = 70,
+  y = 70,
+  title,
+  desc,
+  className = '',
+  collapsed = true,
+}) => {
   return (
     <div
       id={style.timeline}
@@ -29,7 +37,7 @@ const Timeline = ({ img, x = 70, y = 70, title, desc, className = '' }) => {
       </i>
       <article>
         <h3>{title}</h3>
-        <p className='cut-line -at-2'>{desc}</p>
+        <p className={collapsed ? 'cut-line -at-2' : ''}>{desc}</p>
       </article>
     </div>
   )

@@ -5,7 +5,6 @@ import style from 'styles/home.module.scss'
 import Certicifations from '@/components/Certicifations'
 import Component from '@/components/Component'
 import { reducer, defaultState } from '@/components/home/data'
-import { FaLongArrowAltRight } from 'react-icons/fa'
 
 import Pic from 'public/images/pic.jpg'
 import Mongodb from 'public/images/mongodb.png'
@@ -50,7 +49,7 @@ export default function Home() {
                 <h3 data-timeline-year>{line.year}</h3>
                 <div>
                   {line.data.map((lin) => (
-                    <Timeline key={lin.id} {...lin} />
+                    <Timeline key={lin.id} {...lin} collapsed={false} />
                   ))}
                 </div>
               </div>

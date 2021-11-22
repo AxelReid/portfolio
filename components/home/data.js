@@ -32,9 +32,14 @@ export const defaultState = {
       year: '2019 - 2020',
       data: [
         {
-          id: 0,
-          title: 'Html, Css, Javscript',
-          desc: 'Struggled so much on learning Javascript ',
+          id: 'kw9320u',
+          title: 'Dived into popular programming languages',
+          desc: 'Initially, i started learning C++, then Python, Php, TypeScript, but it was a mistake i couldn`t learn any of them well that i should have committed to one and grasp it first',
+        },
+        {
+          id: 'jdefh98',
+          title: 'Html, Css, Javascript',
+          desc: 'So i considered web fundamentals and mastered them well',
         },
       ],
     },
@@ -44,27 +49,27 @@ export const defaultState = {
         {
           id: 1,
           title: 'React Js, some UI tools',
-          desc: 'After alot of strugle, i could build any front-end web application',
+          desc: 'After mastering css and vanilla javascript, learned modern UI tools to be a front-end developer.',
         },
         {
           id: 2,
-          title: 'Got my first front-end developer job',
-          desc: 'I gained so much confidence about my front-end skills by joning a large scale project for 5 months in Radiomer uz',
+          title: 'Got my first React Front-end web developer job',
+          desc: 'Job experience gave me so much confidence about my front-end skills by joining a large scale project for 5 months in Radiomer uz',
         },
         {
           id: 3,
           title: 'Node Js, Express Js',
-          desc: 'Eventually i learned to build a server for my front-end apps',
+          desc: 'Started backend in the JS manner so i could learn it faster and did so.',
         },
         {
           id: 4,
           title: 'MongoDB',
-          desc: 'I have been taking the official courses and got some certifications',
+          desc: 'My prefefered Database, i have been taking the official courses and got some certifications',
         },
         {
           id: 5,
           title: 'Next Js',
-          desc: 'I can opine that NEXT JS is the future of web development',
+          desc: 'My solution for Full Stack Javascript Web Framework and I can opine that NEXT JS is the future of web development',
         },
       ],
     },

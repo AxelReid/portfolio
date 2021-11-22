@@ -9,6 +9,7 @@ import Pic from 'public/images/pic.jpg'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import matter from 'gray-matter'
+import rehypePrism from '@mapbox/rehype-prism'
 
 export function getStaticPaths() {
   const paths = blogsPath
@@ -28,7 +29,7 @@ export async function getStaticProps({ params: { blog_id } }) {
   const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [],
-      rehypePlugins: [],
+      rehypePlugins: [rehypePrism],
     },
     scope: data,
   })

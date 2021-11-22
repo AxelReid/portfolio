@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import 'styles/global.scss'
+import 'styles/code-highlight.scss'
 
 function MyApp({ Component, pageProps }) {
   // check if previous theme was saved, if yes, then apply that theme

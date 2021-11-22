@@ -1,0 +1,100 @@
+:root {
+  --keyword: hsl(316, 73%, 69%); // const
+  --string: hsl(71, 92%, 75%);
+  --function: hsl(135, 94%, 65%);
+  --punctuation: hsl(196, 61%, 70%);
+  --property-access: hsl(274, 57%, 72%);
+  --parameter: hsl(31, 100%, 70%);
+}
+// #light {
+//   --keyword: hsl(316, 100%, 50%);
+//   --string: hsl(54, 100%, 36%);
+//   --function: hsl(123, 41%, 43%);
+//   --punctuation: hsl(196, 100%, 38%);
+//   --property-access: hsl(214, 100%, 48%);
+//   --parameter: hsl(31, 100%, 45%);
+// }
+
+pre {
+  code {
+    span.token {
+      &.comment {
+        opacity: 0.5;
+        font-style: italic;
+      }
+    }
+    &.language-html,
+    &.language-css,
+    &.language-scss,
+    &.language-js {
+      span.token {
+        &.imports {
+          span {
+            color: white;
+          }
+        }
+        &.keyword,
+        &.operator,
+        &.selector,
+        &.unit {
+          color: var(--keyword);
+        }
+
+        &.string {
+          color: var(--string);
+        }
+        &.function {
+          &,
+          span {
+            color: var(--function);
+          }
+        }
+        &.punctuation {
+          color: var(--punctuation);
+        }
+        &.property-access,
+        &.number {
+          color: var(--property-access);
+        }
+        &.parameter {
+          font-style: italic;
+          color: var(--parameter);
+        }
+
+        // html
+        &.tag {
+          color: var(--keyword);
+          .punctuation {
+            color: white;
+          }
+          .attr-name {
+            color: var(--function);
+          }
+          .attr-value {
+            color: var(--string);
+          }
+        }
+      }
+    }
+    &.language-css,
+    &.language-scss {
+      span.token {
+        &.punctuation {
+          color: var(--keyword);
+        }
+        &.property {
+          color: var(--punctuation);
+        }
+        &.color {
+          color: var(--property-access);
+        }
+        &.selector {
+          .pseudo-class {
+            font-style: italic;
+            color: var(--function);
+          }
+        }
+      }
+    }
+  }
+}
