@@ -227,6 +227,7 @@ button {
   position: relative;
   margin: 0 auto;
   width: Min(850px, calc(100% - 40px));
+  width: Min(850px, 94%);
   &.pad {
     padding-top: 50px;
   }
