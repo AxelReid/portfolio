@@ -1,10 +1,5 @@
 export const reducer = (state, action) => {
-  switch (action.type) {
-    case 'xsfd':
-      return { ...state }
-    default:
-      return { ...state }
-  }
+  return state
 }
 
 import ProofM001 from 'public/assets/certifications/mongodb/M001_proof_of_completion.jpeg'
@@ -93,12 +88,13 @@ export const defaultState = {
   projects: [
     {
       id: 1,
-      title: 'My old portdolio',
+      title: 'My old portfolio',
       link: 'https://axelreid-webdev.netlify.app',
       imgs: [
         { id: 'img-1', img: Port1 },
         { id: 'img-2', img: Port2 },
       ],
+      desc: 'Built in React JS, React-router, CSS and heavily relied on Framer-motion. This was my first React project and built it as a resume to showcase my front-end skills.',
     },
     {
       id: 2,
@@ -108,6 +104,7 @@ export const defaultState = {
         { id: 'img-1', img: Fm1 },
         { id: 'img-2', img: Fm2 },
       ],
+      desc: 'A demonstation of the power of Framer-motion with Next JS',
     },
     {
       id: 3,
@@ -118,24 +115,28 @@ export const defaultState = {
         { id: 'img-2', img: PhSWhite },
         { id: 'img-3', img: PhSItem },
       ],
+      desc: 'Built in pure Vanilla Javascript (no third-party libraries)',
     },
     {
       id: 4,
       title: 'My Talking Tom Store',
       link: 'https://axel-js-project-mytalkingtom.netlify.app',
       imgs: [{ id: 'img-1', img: MyTom }],
+      desc: 'Built in pure Vanilla Javascript (no third-party libraries).',
     },
     {
       id: 5,
       title: 'RPS Game',
       link: 'https://axel-js-project-rps-game.netlify.app',
       imgs: [{ id: 'img-1', img: RPSG }],
+      desc: 'A game built in pure Vanilla Javascript (no third-party libraries).',
     },
     {
       id: 6,
       title: 'React Store',
       link: 'https://axel-react-project-shopping-cart.netlify.app',
       imgs: [{ id: 'img-1', img: RS }],
+      desc: 'Built in React JS, React-router, Context API (my second React js APP).',
     },
   ],
 }

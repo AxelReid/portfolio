@@ -42,11 +42,16 @@ export const initialData = {
     },
     {
       id: 1,
+      href: '/projects',
+      name: 'Projects',
+    },
+    {
+      id: 2,
       href: '/tech',
       name: 'Technologies',
     },
     {
-      id: 2,
+      id: 3,
       href: '/about',
       name: 'About',
     },

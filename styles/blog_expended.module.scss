@@ -25,17 +25,15 @@
   [data-mdx-wrapper] {
     padding: Clamp(45px, 3vw, 4em) 0;
     color: var(--color-secondary);
+    line-height: 1.7;
     *:not(h1, h2, h3, h4, h5, h6, pre, code) {
       font-size: var(--font-big);
-      line-height: 1.8;
     }
     *:is(h1, h2, h3, h4, h5, h6) {
       margin: 50px 0 20px 0;
     }
     pre {
-      * {
-        line-height: 1.4;
-      }
+      line-height: 1.4;
       background: var(--bg-code-material);
       padding: 15px;
       margin: 10px 0;

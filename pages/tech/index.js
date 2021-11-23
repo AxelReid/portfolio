@@ -121,16 +121,9 @@ const techs_used = [
     y: 45,
   },
 ]
-const techs_will = [
+const techs_now = [
   {
     id: 0,
-    img: ReactNative,
-    title: 'React Native JS',
-    desc: 'Javscript Framerwork to build native both IOS and Android app.',
-    y: 80,
-  },
-  {
-    id: 1,
     img: ReduxLogo,
     title: 'Redux',
     desc: 'State Management tool for Javascript frameworks.',
@@ -138,12 +131,21 @@ const techs_will = [
     className: 'filter -invert',
   },
   {
-    id: 2,
+    id: 1,
     img: TailwindCss,
     title: 'Tailwind CSS',
     desc: 'CSS Library to build astounding designs.',
     y: 40,
   },
+  {
+    id: 2,
+    img: ReactNative,
+    title: 'React Native JS',
+    desc: 'Javscript Framerwork to build native both IOS and Android app.',
+    y: 80,
+  },
+]
+const techs_will = [
   {
     id: 3,
     img: PythonLogo,
@@ -175,7 +177,7 @@ const index = () => {
             />
           ))}
         </section>
-        <h2>I used but don&apos;t use now</h2>
+        <h2>I&apos;ve used but don&apos;t use now</h2>
         <section>
           {techs_used.map((tech, i) => (
             <Timeline
@@ -190,6 +192,19 @@ const index = () => {
           ))}
         </section>
         <h2>I&apos;m learning now</h2>
+        <section>
+          {techs_now.map((tech, i) => (
+            <Timeline
+              key={tech.id}
+              img={tech.img}
+              title={tech.title}
+              desc={tech.desc}
+              y={tech.y || 70}
+              className={tech.className}
+            />
+          ))}
+        </section>
+        <h2>I&apos;m gonna learn</h2>
         <section>
           {techs_will.map((tech, i) => (
             <Timeline

@@ -223,7 +223,6 @@
     width: 100%;
     @include flexBox(flex-start, flex-start);
     padding: 20px;
-
     > div:nth-child(1) {
       position: relative;
       min-width: 250px;
@@ -276,8 +275,8 @@
       @include flexBox(flex-start, flex-start, column);
       gap: 20px;
       header {
-        width: 100%;
         position: relative;
+        width: 100%;
         @include flexBox(center, space-between);
         button {
           position: relative;
@@ -291,6 +290,7 @@
         position: relative;
         min-width: 100%;
         max-width: 100%;
+        z-index: var(--z-index-1);
       }
       article {
         padding: 0;
