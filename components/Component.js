@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Nav from './Nav'
-import { FaGithub, FaTelegram } from 'react-icons/fa'
+import { FaGithub, FaTelegram, FaInstagram } from 'react-icons/fa'
 import { SiDuolingo } from 'react-icons/si'
 
 const Component = ({ children, title, desc }) => {
@@ -24,27 +24,6 @@ const Component = ({ children, title, desc }) => {
         </h3>
         <section>
           <ul>
-            <Link href='/' passHref={true}>
-              <p>Home</p>
-            </Link>
-            <Link href='/about' passHref={true}>
-              <p>About</p>
-            </Link>
-            {/* <Link href='/blogs' passHref={true}>
-              <p>Blogs</p>
-            </Link> */}
-            <Link href='/projects' passHref={true}>
-              <p>Projects</p>
-            </Link>
-          </ul>
-          <ul>
-            <a target='_blank' rel='noreferrer' href='https://t.me/Rvse7en'>
-              <p>
-                <FaTelegram />
-                &nbsp;
-                <span>Telegram</span>
-              </p>
-            </a>
             <a
               target='_blank'
               rel='noreferrer'
@@ -67,7 +46,36 @@ const Component = ({ children, title, desc }) => {
                 <span>Duolingo</span>
               </p>
             </a>
+            <a target='_blank' rel='noreferrer' href='https://t.me/Rvse7en'>
+              <p>
+                <FaTelegram />
+                &nbsp;
+                <span>Telegram</span>
+              </p>
+            </a>
+            <a
+              href='https://www.instagram.com/mern_stack_boy/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              <p>
+                <FaInstagram />
+                &nbsp;Instagram
+              </p>
+            </a>
           </ul>
+          <ul>
+            <Link href='/' passHref={true}>
+              <p>Home</p>
+            </Link>
+            <Link href='/about' passHref={true}>
+              <p>About</p>
+            </Link>
+            <Link href='/projects' passHref={true}>
+              <p>Projects</p>
+            </Link>
+          </ul>
+
           <ul></ul>
           <ul></ul>
         </section>

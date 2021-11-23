@@ -66,12 +66,7 @@ export default function Home() {
               <Image layout='responsive' src={NodeJs} alt='nodejs'></Image>
             </div>
             <div data-mongodb className='filter -shadow'>
-              <Image
-                layout='responsive'
-                src={Mongodb}
-                alt='mongodb'
-                priority
-              ></Image>
+              <Image layout='responsive' src={Mongodb} alt='mongodb'></Image>
             </div>
             <div data-express>
               <Image layout='responsive' src={Express} alt='expressjs'></Image>

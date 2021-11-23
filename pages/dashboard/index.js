@@ -3,7 +3,7 @@ import React from 'react'
 
 const Dashboard = () => {
   return (
-    <Component title='Say to me' desc='Whatsoever good, say to me'>
+    <Component title='Dashboard' desc='Whatsoever good, say to me'>
       <h1>Dashboard</h1>
     </Component>
   )

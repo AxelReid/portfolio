@@ -15,7 +15,6 @@ const Item = React.memo(
                 width='20'
                 height={y || 20}
                 layout='responsive'
-                priority
                 alt='image'
                 placeholder='blur'
                 blurDataURL={img}

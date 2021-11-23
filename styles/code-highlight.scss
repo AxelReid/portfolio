@@ -5,41 +5,61 @@
   --punctuation: hsl(196, 61%, 70%);
   --property-access: hsl(274, 57%, 72%);
   --parameter: hsl(31, 100%, 70%);
+
+  --import-name: #a6acc0;
+  --keyword-module: #89ddff;
+  --keyword: #c792d8;
+  --string: #c3e88d;
+  --function: #82aaf5;
+  --punctuation: hsl(196, 100%, 38%);
+  --others: #abaccd;
+  --others2: #dd7a71;
+  --parameter: #ff5770;
+  --number: #f58c6c;
 }
-// #light {
-//   --keyword: hsl(316, 100%, 50%);
-//   --string: hsl(54, 100%, 36%);
-//   --function: hsl(123, 41%, 43%);
-//   --punctuation: hsl(196, 100%, 38%);
-//   --property-access: hsl(214, 100%, 48%);
-//   --parameter: hsl(31, 100%, 45%);
-// }
 
 pre {
+  max-height: 100vh;
+  *::selection {
+    color: inherit;
+    background: rgba(171, 172, 205, 0.2);
+  }
   code {
     span.token {
       &.comment {
         opacity: 0.5;
         font-style: italic;
+        color: var(--import-name);
       }
     }
     &.language-html,
     &.language-css,
     &.language-scss,
+    &.language-jsx,
     &.language-js {
+      color: var(--others2) !important;
       span.token {
         &.imports {
           span {
-            color: white;
+            color: var(--import-name);
           }
         }
         &.keyword,
-        &.operator,
-        &.selector,
-        &.unit {
+        &.operator {
           color: var(--keyword);
         }
-
+        &.keyword.module,
+        &.keyword.control-flow {
+          font-style: italic;
+          color: var(--keyword-module);
+        }
+        &.unit,
+        &.number {
+          color: var(--number);
+        }
+        &.property-access {
+          color: var(--others);
+        }
         &.string {
           color: var(--string);
         }
@@ -50,25 +70,24 @@ pre {
           }
         }
         &.punctuation {
-          color: var(--punctuation);
-        }
-        &.property-access,
-        &.number {
-          color: var(--property-access);
+          color: var(--keyword-module);
         }
         &.parameter {
-          font-style: italic;
           color: var(--parameter);
         }
 
         // html
         &.tag {
-          color: var(--keyword);
+          color: var(--others2);
           .punctuation {
-            color: white;
+            color: var(--keyword-module);
+          }
+          .class-name {
+            color: vaR(--string);
           }
           .attr-name {
-            color: var(--function);
+            color: var(--keyword);
+            font-style: italic;
           }
           .attr-value {
             color: var(--string);
@@ -76,22 +95,37 @@ pre {
         }
       }
     }
+
+    &.language-html,
+    &.language-jsx {
+      color: var(--others) !important;
+    }
+    // css, scss
     &.language-css,
     &.language-scss {
       span.token {
+        &.keyword {
+          font-style: italic;
+          color: var(--keyword-module);
+          & + .string {
+            // text-decoration: underline;
+            // padding-bottom: 2px;
+            border-bottom: 2px solid var(--string);
+          }
+        }
         &.punctuation {
           color: var(--keyword);
         }
         &.property {
-          color: var(--punctuation);
+          color: var(--keyword-module);
         }
         &.color {
-          color: var(--property-access);
+          color: var(--others2);
         }
         &.selector {
           .pseudo-class {
             font-style: italic;
-            color: var(--function);
+            color: var(--string);
           }
         }
       }

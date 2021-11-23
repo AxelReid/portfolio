@@ -5,6 +5,9 @@
   width: 100%;
   & > h2 {
     margin-bottom: 20px;
+    &:not(:first-child) {
+      margin-top: 50px;
+    }
   }
   section {
     position: relative;

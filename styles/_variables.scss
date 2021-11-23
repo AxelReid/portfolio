@@ -7,7 +7,7 @@
 @mixin background($col) {
   background: radial-gradient(
     circle at 100% 100%,
-    var($col) 40%,
+    var($col) 35%,
     var(--bg-primary)
   );
 }

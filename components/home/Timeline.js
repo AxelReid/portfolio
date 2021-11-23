@@ -23,11 +23,11 @@ const Timeline = ({
           <div className={className}>
             <Image
               src={img}
-              placeholder='blur'
+              placeholder='empty'
+              blurDataURL={img}
               width={x}
               height={y}
               layout='responsive'
-              priority
               alt='logo'
             ></Image>
           </div>

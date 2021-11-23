@@ -16,7 +16,6 @@ const Certicifations = ({ certifications }) => {
               height={height}
               layout='responsive'
               placeholder='blur'
-              priority
               alt='image'
             />
           </div>

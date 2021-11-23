@@ -3,7 +3,8 @@ import Component from '@/components/Component'
 import style from '@/styles/tech.module.scss'
 import Timeline from '@/components/home/Timeline'
 
-import Pic from 'public/images/pic.jpg'
+// using
+// import Pic from 'public/images/pic.jpg'
 import Mongodb from 'public/images/mongodb.png'
 import Express from 'public/images/express.png'
 import ReactJs from 'public/images/react.png'
@@ -14,6 +15,18 @@ import Javascript from 'public/images/javascript.png'
 import Sass from 'public/images/sass-logo.png'
 import Sc from 'public/images/sc.png'
 import FMotion from 'public/images/framer-motion.png'
+
+// used
+import Bootstrap from 'public/images/bootstrap.svg'
+import JqueryLogo from 'public/images/jquery.png'
+import PhpLogo from 'public/images/PHP-logo.png'
+
+// want to use
+import ReactNative from 'public/images/react-native-logo.png'
+import ReduxLogo from 'public/images/redux.png'
+import TailwindCss from 'public/images/tailwind-css.png'
+import PythonLogo from 'public/images/python.png'
+import DjangoLogo from 'public/images/django.png'
 
 const techs = [
   {
@@ -86,6 +99,64 @@ const techs = [
     y: 45,
   },
 ]
+const techs_used = [
+  {
+    id: 0,
+    img: Bootstrap,
+    title: 'Bootstrap',
+    desc: 'UI tool',
+  },
+  {
+    id: 1,
+    img: JqueryLogo,
+    title: 'Jquery',
+    desc: 'The most popular Javscript library (write less, do more)',
+    className: 'filter -invert',
+  },
+  {
+    id: 2,
+    img: PhpLogo,
+    title: 'Php',
+    desc: 'Web back-end tool',
+    y: 45,
+  },
+]
+const techs_will = [
+  {
+    id: 0,
+    img: ReactNative,
+    title: 'React Native JS',
+    desc: 'Javscript Framerwork to build native both IOS and Android app.',
+    y: 80,
+  },
+  {
+    id: 1,
+    img: ReduxLogo,
+    title: 'Redux',
+    desc: 'State Management tool for Javascript frameworks.',
+    y: 65,
+    className: 'filter -invert',
+  },
+  {
+    id: 2,
+    img: TailwindCss,
+    title: 'Tailwind CSS',
+    desc: 'CSS Library to build astounding designs.',
+    y: 40,
+  },
+  {
+    id: 3,
+    img: PythonLogo,
+    title: 'Python',
+    desc: 'General-purpose high-level programming language.',
+  },
+  {
+    id: 4,
+    img: DjangoLogo,
+    title: 'Django',
+    desc: 'Python Full Stack Web Framework.',
+  },
+]
 
 const index = () => {
   return (
@@ -94,6 +165,33 @@ const index = () => {
         <h2>I use</h2>
         <section>
           {techs.map((tech, i) => (
+            <Timeline
+              key={tech.id}
+              img={tech.img}
+              title={tech.title}
+              desc={tech.desc}
+              y={tech.y || 70}
+              className={tech.className}
+            />
+          ))}
+        </section>
+        <h2>I used but don&apos;t use now</h2>
+        <section>
+          {techs_used.map((tech, i) => (
+            <Timeline
+              key={tech.id}
+              img={tech.img}
+              title={tech.title}
+              no_blue={true}
+              desc={tech.desc}
+              y={tech.y || 70}
+              className={tech.className}
+            />
+          ))}
+        </section>
+        <h2>I&apos;m learning now</h2>
+        <section>
+          {techs_will.map((tech, i) => (
             <Timeline
               key={tech.id}
               img={tech.img}

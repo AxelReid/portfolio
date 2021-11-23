@@ -92,7 +92,6 @@ const Project = ({ project, expanded, toggleExpand }) => {
               layout='responsive'
               alt='img'
               placeholder='blur'
-              priority
             />
           </motion.div>
         ))
@@ -103,7 +102,6 @@ const Project = ({ project, expanded, toggleExpand }) => {
             layout='responsive'
             placeholder='blur'
             alt='img'
-            priority
           />
         </motion.div>
       )}

@@ -11,7 +11,6 @@ const CustomImage = ({ image, x = 80, y = 80 }) => {
         layout='responsive'
         placeholder='blur'
         blurDataURL={image}
-        priority
         alt='image'
       />
     </div>

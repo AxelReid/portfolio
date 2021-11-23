@@ -38,7 +38,7 @@ const Nav = memo(() => {
           {nav_data.menu_open ? <FaTimes /> : <FaBars />}
         </span>
         <h3>
-          <Link href='/'>NEXT 12</Link>
+          <Link href='/'>A.A.MERN</Link>
         </h3>
       </div>
       <ul>
@@ -53,12 +53,12 @@ const Nav = memo(() => {
         ))}
       </ul>
       <aside>
-        <button
+        {/* <button
           data-name='join'
           onClick={() => dispatch('NAV_TOGGLE', !nav_data.nav_open)}
         >
           {nav_data.nav_open ? <FaTimes /> : 'Join'}
-        </button>
+        </button> */}
         <button data-name='theme' onClick={themeSwitch}>
           {nav_data.theme ? <FaMoon /> : <FaSun />}
         </button>
