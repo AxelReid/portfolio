@@ -86,7 +86,7 @@ export default function Home() {
           page
         </p>
         <Projects projects={someProjects} />
-        <Link href='/projects'>
+        <Link href='/projects' passHref={true}>
           <h4>. . . more projects</h4>
         </Link>
       </section>

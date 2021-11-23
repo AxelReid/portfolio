@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Image from 'next/image'
 import { FaAngleUp, FaTimes, FaLink } from 'react-icons/fa'
 import style from 'styles/home.module.scss'
 import { motion } from 'framer-motion'
 
-const Project = React.memo(({ project, expanded, toggleExpand }) => {
+const Project = memo(({ project, expanded, toggleExpand }) => {
   const { id, imgs, link, title, desc = 'no desc' } = project
 
   const transition = {
@@ -118,4 +118,5 @@ const Project = React.memo(({ project, expanded, toggleExpand }) => {
   )
 })
 
+Project.displayName = 'Project'
 export default Project

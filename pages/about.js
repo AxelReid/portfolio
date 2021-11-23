@@ -50,18 +50,21 @@ const About = () => {
           placeholder='blur'
           layout='responsive'
           quality='50'
+          alt='hometown;'
         />
         <Image
           src={GardenLong}
           placeholder='blur'
           layout='responsive'
           quality='50'
+          alt='hometownt'
         />
         <Image
           src={Mountain}
           placeholder='blur'
-          quality='50'
           layout='responsive'
+          quality='50'
+          alt='hometownt'
         />
       </section>
     </Component>
