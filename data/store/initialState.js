@@ -1,5 +1,11 @@
 import ProofM001 from 'public/assets/certifications/mongodb/M001_proof_of_completion.jpeg'
 import ProofM220 from 'public/assets/certifications/mongodb/M220JS_proof_of_completion.jpeg'
+// instagram mern clone
+import Insta1 from 'public/assets/projects/instagram-clone-mern/Insta-mern-1.png'
+import Insta2 from 'public/assets/projects/instagram-clone-mern/insta-mern-2.png'
+import Insta3 from 'public/assets/projects/instagram-clone-mern/insta-mern-3.png'
+import Insta4 from 'public/assets/projects/instagram-clone-mern/insta-mern-4.png'
+import Insta5 from 'public/assets/projects/instagram-clone-mern/insta-mern-5.png'
 // nextjs+framer-motion+sass
 import Fm1 from 'public/assets/projects/next+motion/fm1.png'
 import Fm2 from 'public/assets/projects/next+motion/fm2.png'
@@ -52,7 +58,7 @@ export const timeline = [
       {
         id: 'kw9320u',
         title: 'Dived into popular programming languages',
-        desc: 'Initially, i started learning C++, then Python, Php, TypeScript, but it was a mistake i couldn`t learn any of them well that i should have committed to one and grasp it first',
+        desc: 'Initially, i stepped into C++, then Python, Php, TypeScript, but it was a mistake i couldn`t learn any of them well that i should have committed to one and grasp it first',
       },
       {
         id: 'jdefh98',
@@ -110,6 +116,20 @@ export const certifications = [
 ]
 export const projects = [
   {
+    id: 11,
+    title: 'Instagram Clone (with MERN)',
+    link: 'https://github.com/AxelReid/mern-instagram-clone',
+    imgs: [
+      { id: 'img-1', img: Insta1 },
+      { id: 'img-2', img: Insta2 },
+      { id: 'img-3', img: Insta3 },
+      { id: 'img-4', img: Insta4 },
+      { id: 'img-5', img: Insta5 },
+    ],
+    desc: 'Full stack instagram clone. There is no live demo but you can clone the source code and try locally. I did not deploy this because i did not want people play around with my database or upload there sensitive things.',
+    top: true,
+  },
+  {
     id: 1,
     title: 'My old portfolio',
     link: 'https://axelreid-webdev.netlify.app',
@@ -118,20 +138,22 @@ export const projects = [
       { id: 'img-2', img: Port2 },
     ],
     desc: 'Built in React JS, React-router, CSS and heavily relied on Framer-motion. This was my first React project and built it as a resume to showcase my front-end skills.',
+    top: true,
   },
   {
     id: 2,
-    title: 'Next JS + Framer Motions + Scss',
+    title: 'Animated Layout',
     link: 'https://nextjs-framer-motion.vercel.app',
     imgs: [
       { id: 'img-1', img: Fm1 },
       { id: 'img-2', img: Fm2 },
     ],
     desc: 'A demonstation of the power of Framer-motion with Next JS',
+    top: true,
   },
   {
     id: 3,
-    title: 'E-commerce Store',
+    title: 'Simple E-commerce Store',
     link: 'https://axelreid-store.netlify.app',
     imgs: [
       { id: 'img-1', img: PhSBlack },
@@ -139,6 +161,7 @@ export const projects = [
       { id: 'img-3', img: PhSItem },
     ],
     desc: 'Built in pure Vanilla Javascript (no third-party libraries)',
+    top: true,
   },
   {
     id: 4,

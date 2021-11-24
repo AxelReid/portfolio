@@ -19,9 +19,7 @@ const Component = ({ children, title, desc }) => {
       <Nav />
       {children}
       <footer>
-        <h3>
-          Built in - <span>Next JS, Mdx, Scss, ...</span>
-        </h3>
+        <h3>Built in Next JS, Mdx, Redux, ...</h3>
         <section>
           <ul>
             <a
@@ -75,7 +73,6 @@ const Component = ({ children, title, desc }) => {
               <p>Projects</p>
             </Link>
           </ul>
-
           <ul></ul>
           <ul></ul>
         </section>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Component from '@/components/Component'
 import style from '@/styles/tech.module.scss'
-import Timeline from '@/components/home/Timeline'
+import Timeline from '@/components/Timeline'
 import { useSelector } from 'react-redux'
 
 const Index = () => {

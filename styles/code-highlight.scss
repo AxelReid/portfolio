@@ -21,14 +21,21 @@
 [data-mdx-wrapper] {
   padding: Clamp(45px, 3vw, 4em) 0;
   color: var(--color-secondary);
-  line-height: 1.5;
+  line-height: 1.7;
   *:not(h1, h2, h3, h4, h5, h6, pre, code) {
     font-size: var(--font-big);
   }
   *:is(h1, h2) {
     margin: 50px 0 20px 0;
   }
-
+  p {
+    code {
+      background: var(--bg-fifth);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: var(--font-middle);
+    }
+  }
   a {
     color: var(--color-blue);
     &:hover {
@@ -62,10 +69,7 @@ pre {
   border-radius: Clamp(4px, 2vw, 20px);
   overflow: auto;
   max-height: 100vh;
-  *::selection {
-    color: inherit;
-    background: rgba(171, 172, 205, 0.2);
-  }
+
   code {
     font-size: var(--font-middle);
     color: #abaccd;

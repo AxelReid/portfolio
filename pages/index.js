@@ -13,7 +13,7 @@ import Express from 'public/images/express.png'
 import ReactJs from 'public/images/react.png'
 import NodeJs from 'public/images/node.png'
 import NextJs from 'public/images/next.png'
-import Timeline from '@/components/home/Timeline'
+import Timeline from '@/components/Timeline'
 import Projects from '@/components/Projects'
 
 export default function Home() {

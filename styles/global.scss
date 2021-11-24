@@ -23,6 +23,7 @@
   --color-blue: #6183fc;
   --color-red: red;
   --color-brown: #686060;
+  --color-selection: rgba(171, 172, 205, 0.25);
 
   --font-bigger: 22px;
   --font-big: 20px;
@@ -72,22 +73,20 @@
     background: var(--color-light);
   }
   &::selection {
-    background: var(--bg-home);
-    color: var(--color-blue);
+    background: var(--color-selection);
   }
 }
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   font-family: 'IBM Plex Sans', 'Lato', sans-serif;
   overflow-y: scroll;
-  @include background(--bg-home);
   // --bg-blogs, --bg-tech, --bg-say
+  @include background(--bg-home);
   background-attachment: fixed !important;
 }
-
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -97,11 +96,7 @@ body {
 .mt-section {
   margin-top: Max(100px, 10%);
 }
-.big-title {
-  font-size: Clamp(2.5rem, 7vw, 3.5rem);
-  font-weight: 700;
-  margin-bottom: 10px;
-}
+
 p {
   color: var(--color-secondary);
   font-size: var(--font-middle);
@@ -126,6 +121,9 @@ h2,
 h3 {
   color: var(--color-primary);
 }
+h1 {
+  font-size: 2.1rem;
+}
 h1,
 h2 {
   letter-spacing: -1.2px;
@@ -138,6 +136,11 @@ h2.h2 {
 h3 {
   font-size: var(--font-bigger);
   font-weight: 500;
+}
+.big-title {
+  font-size: Clamp(2.5rem, 7vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 button {
   cursor: pointer;
@@ -204,7 +207,7 @@ button {
   }
 }
 .card-glass {
-  background: linear-gradient(168deg, var(--bg-fourth) 25%, transparent);
+  background: linear-gradient(168deg, var(--bg-fourth) 30%, transparent);
   &:before,
   &:after {
     position: absolute;
@@ -239,12 +242,6 @@ footer {
   border-top: 1px solid var(--bg-fifth);
   margin-top: 80px;
   padding: 30px 0 50px 0;
-  h3 {
-    font-weight: 400;
-    span {
-      font-weight: 600;
-    }
-  }
   section {
     margin-top: 50px;
     @include flexBox(flex-start, space-between);
@@ -263,11 +260,5 @@ footer {
         }
       }
     }
-  }
-}
-.about-page {
-  line-height: 1.5;
-  *:not(h1, h2, h3, h4, h5, h6, pre, code) {
-    font-size: var(--font-big);
   }
 }
