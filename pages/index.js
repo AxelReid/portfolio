@@ -18,6 +18,7 @@ import Projects from '@/components/Projects'
 
 export default function Home() {
   const dispatch = useDispatch()
+
   useEffect(() => {
     dispatch(action(project_types.GET_TOP))
   }, [])

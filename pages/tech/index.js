@@ -4,7 +4,7 @@ import style from '@/styles/tech.module.scss'
 import Timeline from '@/components/home/Timeline'
 import { useSelector } from 'react-redux'
 
-const index = () => {
+const Index = () => {
   const data = useSelector((state) => state.tech)
 
   return (
@@ -32,4 +32,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index
