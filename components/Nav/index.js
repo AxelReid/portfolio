@@ -1,26 +1,25 @@
-import React, { useCallback, useEffect, useReducer, memo } from 'react'
+import React, { useEffect, memo } from 'react'
 import Link from 'next/link'
 import style from 'styles/home.module.scss'
 import { FaMoon, FaSun, FaTimes, FaBars } from 'react-icons/fa'
 import { useRouter } from 'next/router'
-import { reducer, initialData } from './manage.js'
+import { useSelector, useDispatch } from 'react-redux'
+import action, { nav_types } from '@/data/store/actions'
 
 const Nav = memo(() => {
   const router = useRouter()
-  const [nav_data, dispatchData] = useReducer(reducer, initialData)
 
-  const dispatch = useCallback((type, payload) => {
-    dispatchData({ type, payload: payload })
+  const navData = useSelector((state) => state.nav)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(action(nav_types.THEME, localStorage.getItem('theme')))
   }, [])
 
   useEffect(() => {
-    dispatch('THEME', localStorage.getItem('theme'))
-  }, [])
-
-  useEffect(() => {
-    dispatch('ACTIVE_LINK', router.pathname)
-    if (nav_data.nav_open) dispatch('NAV_TOGGLE', false)
-    if (nav_data.menu_open) dispatch('MENU_TOGGLE', false)
+    dispatch(action(nav_types.ACTIVE_LINK, router.pathname))
+    if (navData.nav_open) dispatch(action(nav_types.NAV_TOGGLE, false))
+    if (navData.menu_open) dispatch((nav_types.MENU_TOGGLE, false))
   }, [router.pathname])
 
   const themeSwitch = () => {
@@ -28,25 +27,29 @@ const Nav = memo(() => {
     const val = attr === '' ? 'light' : ''
     document.body.setAttribute('id', val)
     localStorage.setItem('theme', val)
-    dispatch('THEME', val)
+    dispatch(action(nav_types.THEME, val))
   }
 
   return (
-    <header className={style.nav} data-menu={nav_data.menu_open ? 'open' : ''}>
+    <header className={style.nav} data-menu={navData.menu_open ? 'open' : ''}>
       <div data-header-logo>
-        <span onClick={() => dispatch('MENU_TOGGLE', !nav_data.menu_open)}>
-          {nav_data.menu_open ? <FaTimes /> : <FaBars />}
+        <span
+          onClick={() =>
+            dispatch(action(nav_types.MENU_TOGGLE, !navData.menu_open))
+          }
+        >
+          {navData.menu_open ? <FaTimes /> : <FaBars />}
         </span>
         <h3>
           <Link href='/'>A.A.MERN</Link>
         </h3>
       </div>
       <ul>
-        {nav_data.links.map(({ id, href, name }) => (
+        {navData.links.map(({ id, href, name }) => (
           <li
             key={id}
-            data-active={href === nav_data.activeLink ? 'active' : ''}
-            onClick={() => dispatch('ACTIVE_LINK', href)}
+            data-active={href === navData.activeLink ? 'active' : ''}
+            onClick={() => dispatch(action(nav_types.ACTIVE_LINK, href))}
           >
             <Link href={href}>{name}</Link>
           </li>
@@ -55,15 +58,15 @@ const Nav = memo(() => {
       <aside>
         {/* <button
           data-name='join'
-          onClick={() => dispatch('NAV_TOGGLE', !nav_data.nav_open)}
+          onClick={() => dispatch('NAV_TOGGLE', !navData.nav_open)}
         >
-          {nav_data.nav_open ? <FaTimes /> : 'Join'}
+          {navData.nav_open ? <FaTimes /> : 'Join'}
         </button> */}
         <button data-name='theme' onClick={themeSwitch}>
-          {nav_data.theme ? <FaMoon /> : <FaSun />}
+          {navData.theme ? <FaMoon /> : <FaSun />}
         </button>
       </aside>
-      {nav_data.nav_open && <nav></nav>}
+      {navData.nav_open && <nav></nav>}
     </header>
   )
 })

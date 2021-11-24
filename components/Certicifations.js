@@ -5,7 +5,7 @@ import style from '@/styles/home.module.scss'
 const Certicifations = ({ certifications }) => {
   return (
     <div id={style.certifications} className='mt-section'>
-      <h2 className='mb-10'>Certifications</h2>
+      <h2 className='mb-10 h2'>Certifications</h2>
       <p>Some online course completion proofs</p>
       {certifications.map(({ id, image, width, height, link }) => (
         <div key={id} id={style.certification} className='mt-50'>

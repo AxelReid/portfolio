@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
-import style from 'styles/blog_expended.module.scss'
+import style from 'styles/blogs.module.scss'
 import Component from '@/components/Component'
-import { blogsPath, BLOG_DETAILS } from '@/lib/mdxUtils'
+import { blogsPath, MDX_DETAILS, BLOGS_PATH } from '@/lib/mdxUtils'
 import Pic from 'public/images/pic.jpg'
 
 import { MDXRemote } from 'next-mdx-remote'
@@ -22,7 +22,7 @@ export function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { blog_id } }) {
-  const source = BLOG_DETAILS(blog_id)
+  const source = MDX_DETAILS(blog_id, BLOGS_PATH)
 
   const { content, data } = matter(source)
 

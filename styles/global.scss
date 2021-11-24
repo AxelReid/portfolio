@@ -38,7 +38,7 @@
   }
 }
 #light {
-  --bg-primary: #fff;
+  --bg-primary: #fbfbfb;
   --bg-secondary: #f2f5f8;
   --bg-third: #ededed;
   --bg-fourth: #fff;
@@ -132,7 +132,7 @@ h2 {
   line-height: 1em;
   font-weight: 700;
 }
-h2 {
+h2.h2 {
   font-size: Clamp(2rem, 4vw, 2.5rem);
 }
 h3 {
@@ -263,5 +263,11 @@ footer {
         }
       }
     }
+  }
+}
+.about-page {
+  line-height: 1.5;
+  *:not(h1, h2, h3, h4, h5, h6, pre, code) {
+    font-size: var(--font-big);
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import style from 'styles/blog_item.module.scss'
+import style from 'styles/blogs.module.scss'
 
 const Item = React.memo(
   ({ data: { title, description, img, y }, path_link }) => {

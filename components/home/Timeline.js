@@ -23,7 +23,7 @@ const Timeline = ({
           <div className={className}>
             <Image
               src={img}
-              placeholder='empty'
+              placeholder='blur'
               blurDataURL={img}
               width={x}
               height={y}

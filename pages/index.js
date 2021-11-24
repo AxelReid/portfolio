@@ -1,10 +1,11 @@
-import { useCallback, useReducer } from 'react'
+import { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import style from 'styles/home.module.scss'
 import Certicifations from '@/components/Certicifations'
 import Component from '@/components/Component'
-import { reducer, defaultState } from '@/components/home/data'
+import { useSelector, useDispatch } from 'react-redux'
+import action, { project_types } from '@/data/store/actions'
 
 import Pic from 'public/images/pic.jpg'
 import Mongodb from 'public/images/mongodb.png'
@@ -16,11 +17,13 @@ import Timeline from '@/components/home/Timeline'
 import Projects from '@/components/Projects'
 
 export default function Home() {
-  const [data, dispatchData] = useReducer(reducer, defaultState)
-  const someProjects = [data.projects[0], data.projects[1], data.projects[2]]
-  const dispatch = useCallback((type, payload) => {
-    dispatchData({ type: type, payload: payload })
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(action(project_types.GET_TOP))
   }, [])
+
+  const data = useSelector((state) => state.home)
+  const someProjects = useSelector((state) => state.projects)
 
   return (
     <Component>
@@ -41,7 +44,7 @@ export default function Home() {
           </div>
         </div>
         <div data-walkthrough className='mt-section'>
-          <h2 className='mb-10'>Timeline</h2>
+          <h2 className='mb-10 h2'>Timeline</h2>
           <p>Quick demonstration of my programming walkthrough</p>
           <div data-timeline-wrapper className='mt-50'>
             {data.timeline.map((line) => (
@@ -75,7 +78,7 @@ export default function Home() {
         </div>
       </section>
       <section className='mt-section' id={style.someProjects}>
-        <h2 className='mb-10'>Projects</h2>
+        <h2 className='mb-10 h2'>Projects</h2>
         <p>
           To see more project, navigate to{' '}
           <span className='link'>

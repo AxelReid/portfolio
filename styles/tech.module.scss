@@ -3,17 +3,16 @@
 #tech_wrapper {
   position: relative;
   width: 100%;
-  & > h2 {
-    margin-bottom: 20px;
+  & > div {
     &:not(:first-child) {
-      margin-top: 50px;
+      margin-top: 30px;
     }
-  }
-  section {
-    position: relative;
-    width: 100%;
-    @include flexBox;
-    gap: 20px;
-    flex-wrap: wrap;
+    & > section {
+      position: relative;
+      width: 100%;
+      @include flexBox;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
   }
 }
