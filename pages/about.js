@@ -44,3 +44,15 @@ const About = ({ source, frontMatter }) => {
 }
 
 export default About
+
+// Next is a full stack web framework built on top of React JS and Node JS. You can
+// expect everything that is on React and Node. It makes a lot easy for me to integrate
+// the backend with frontend since it came together as one with built-in features. NEXT
+// JS stands out to have built-in features likes:
+
+// - Pre-rendered Static Pages
+// - Static Site Generation (SSG)
+// - Incremental Static Generation (ISG)
+// - Server Side Rendering (SSR)
+
+// As of React 18, Next JS 12 came with Server Side Components and othes biggest improvements ever Next JS Team released.

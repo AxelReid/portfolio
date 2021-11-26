@@ -48,6 +48,10 @@
       list-style: inside;
     }
   }
+
+  hr {
+    opacity: 0.2;
+  }
   blockquote {
     position: relative;
     border-left: 5px solid var(--bg-fifth);
