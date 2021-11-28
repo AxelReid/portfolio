@@ -46,7 +46,7 @@
   --bg-fifth: #d7e7f1;
   --bg-nav: #fff;
 
-  --bg-home: #00c3ff28;
+  --bg-home: #f5f5fa;
   --bg-blogs: #f700ff18;
   --bg-tech: #006eff28;
   --bg-say: #00ff4017;
@@ -214,7 +214,7 @@ button {
     bottom: 0;
     content: '';
     right: 0;
-    opacity: 0.6;
+    filter: blur(3px);
   }
   &:before {
     width: 100%;

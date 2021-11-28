@@ -72,6 +72,9 @@ const Component = ({ children, title, desc }) => {
             <Link href='/projects' passHref={true}>
               <p>Projects</p>
             </Link>
+            <Link href='/resume' passHref={true}>
+              <p>Resume</p>
+            </Link>
           </ul>
           <ul></ul>
           <ul></ul>

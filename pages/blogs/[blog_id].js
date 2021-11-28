@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 import style from 'styles/blogs.module.scss'
 import Component from '@/components/Component'
 import { blogsPath, MDX_DETAILS, BLOGS_PATH } from '@/lib/mdxUtils'
-import Pic from 'public/images/pic.jpg'
+import { Pic } from '@/data/store/initialState'
 
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'

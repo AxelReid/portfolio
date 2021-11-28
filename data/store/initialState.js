@@ -1,3 +1,23 @@
+import Pic from 'public/images/pic.jpg'
+import Mongodb from 'public/images/mongodb.png'
+import Express from 'public/images/express.png'
+import ReactJs from 'public/images/react.png'
+import NodeJs from 'public/images/node.png'
+import NextJs from 'public/images/next.png'
+import HtmlCss from 'public/images/html-css.png'
+import Javascript from 'public/images/javascript.png'
+import Sass from 'public/images/sass-logo.png'
+import Sc from 'public/images/sc.png'
+import FMotion from 'public/images/framer-motion.png'
+import Bootstrap from 'public/images/bootstrap.svg'
+import JqueryLogo from 'public/images/jquery.png'
+import PhpLogo from 'public/images/PHP-logo.png'
+import ReactNative from 'public/images/react-native-logo.png'
+import ReduxLogo from 'public/images/redux.png'
+import TailwindCss from 'public/images/tailwind-css.png'
+import PythonLogo from 'public/images/python.png'
+import DjangoLogo from 'public/images/django.png'
+
 import ProofM001 from 'public/assets/certifications/mongodb/M001_proof_of_completion.jpeg'
 import ProofM220 from 'public/assets/certifications/mongodb/M220JS_proof_of_completion.jpeg'
 // instagram mern clone
@@ -56,14 +76,14 @@ export const timeline = [
     year: '2019 - 2020',
     data: [
       {
-        id: 'kw9320u',
-        title: 'Dived into popular programming languages',
-        desc: 'Initially, i stepped into C++, then Python, Php, TypeScript, but it was a mistake i couldn`t learn any of them well that i should have committed to one and grasp it first',
+        id: 'jdefh98',
+        title: 'Html, Css',
+        desc: 'Started learning html and css on my own. Felt in love with CSS and have spent so much time on designing.',
       },
       {
-        id: 'jdefh98',
-        title: 'Html, Css, Javascript',
-        desc: 'So i considered web fundamentals and mastered them well',
+        id: 'oh_javascript_was_so_hard_to_learn',
+        title: 'JavaScript',
+        desc: 'Struggled so much time to learn it and took me almost a year to master after a lot of dedication.',
       },
     ],
   },
@@ -72,28 +92,33 @@ export const timeline = [
     data: [
       {
         id: 1,
-        title: 'React Js, some UI tools',
-        desc: 'After mastering css and vanilla javascript, learned modern UI tools to be a front-end developer.',
+        title: 'React Js, Framer-motion, Styled-components',
+        desc: 'After mastering pure css and javascript, extended my front-end skill with these modern UI tools.',
       },
       {
         id: 2,
         title: 'Got my first React Front-end web developer job',
-        desc: 'Job experience gave me so much confidence about my front-end skills by joining a large scale project for 5 months in Radiomer uz',
+        desc: 'Job experience gave me so much confidence about my front-end skills by joining a large scale project for 5 months in Radiomer uz.',
       },
       {
         id: 3,
         title: 'Node Js, Express Js',
-        desc: 'Started backend in the JS manner so i could learn it faster and did so.',
+        desc: 'Learned JavScript backend tools and fulfilled my knowledge.',
       },
       {
         id: 4,
         title: 'MongoDB',
-        desc: 'My prefefered Database, i have been taking the official courses and got some certifications',
+        desc: `I'm in love with this NoSQL database program and have been taking the official courses and so far got a couple of certifications.`,
       },
       {
         id: 5,
         title: 'Next Js',
-        desc: 'My solution for Full Stack Javascript Web Framework and I can opine that NEXT JS is the future of web development',
+        desc: 'My solution for Full Stack Javascript Web Framework.',
+      },
+      {
+        id: 6,
+        title: 'Redux and Performance Optimization.',
+        desc: 'Learned Redux and ways to increase performance of React Apps. My previous state management for React was Context API + Reducer Hook.',
       },
     ],
   },
@@ -185,26 +210,6 @@ export const projects = [
     desc: 'Built in React JS, React-router, Context API (my second React js APP).',
   },
 ]
-
-const Mongodb = '/images/mongodb.png'
-const Express = '/images/express.png'
-const ReactJs = '/images/react.png'
-const NodeJs = '/images/node.png'
-const NextJs = '/images/next.png'
-const HtmlCss = '/images/html-css.png'
-const Javascript = '/images/javascript.png'
-const Sass = '/images/sass-logo.png'
-const Sc = '/images/sc.png'
-const FMotion = '/images/framer-motion.png'
-const Bootstrap = '/images/bootstrap.svg'
-const JqueryLogo = '/images/jquery.png'
-const PhpLogo = '/images/PHP-logo.png'
-const ReactNative = '/images/react-native-logo.png'
-const ReduxLogo = '/images/redux.png'
-const TailwindCss = '/images/tailwind-css.png'
-const PythonLogo = '/images/python.png'
-const DjangoLogo = '/images/django.png'
-
 export const technologies = [
   {
     type: 'I use',
@@ -350,3 +355,25 @@ export const technologies = [
     ],
   },
 ]
+
+export {
+  Pic,
+  Mongodb,
+  Express,
+  ReactJs,
+  NodeJs,
+  NextJs,
+  // HtmlCss,
+  // Javascript,
+  // Sass,
+  // Sc,
+  // FMotion,
+  // Bootstrap,
+  // JqueryLogo,
+  // PhpLogo,
+  // ReactNative,
+  // ReduxLogo,
+  // TailwindCss,
+  // PythonLogo,
+  // DjangoLogo,
+}

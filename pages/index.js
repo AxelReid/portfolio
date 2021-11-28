@@ -1,30 +1,27 @@
-import { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import style from 'styles/home.module.scss'
 import Certicifations from '@/components/Certicifations'
 import Component from '@/components/Component'
-import { useSelector, useDispatch } from 'react-redux'
-import action, { project_types } from '@/data/store/actions'
+import { useSelector } from 'react-redux'
 
-import Pic from 'public/images/pic.jpg'
-import Mongodb from 'public/images/mongodb.png'
-import Express from 'public/images/express.png'
-import ReactJs from 'public/images/react.png'
-import NodeJs from 'public/images/node.png'
-import NextJs from 'public/images/next.png'
+import {
+  Pic,
+  Mongodb,
+  Express,
+  ReactJs,
+  NodeJs,
+  NextJs,
+} from 'data/store/initialState'
+
 import Timeline from '@/components/Timeline'
 import Projects from '@/components/Projects'
 
 export default function Home() {
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(action(project_types.GET_TOP))
-  }, [])
-
   const data = useSelector((state) => state.home)
-  const someProjects = useSelector((state) => state.projects)
+  const someProjects = useSelector((state) =>
+    state.projects.filter((project) => project.top && project)
+  )
 
   return (
     <Component>

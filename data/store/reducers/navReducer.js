@@ -1,34 +1,29 @@
+import { createSlice } from '@reduxjs/toolkit'
 import { nav } from '../initialState'
-import { nav_types } from '../actions'
 
-const navReducer = (state = nav, action) => {
-  switch (action.type) {
-    case nav_types.THEME:
-      return {
-        ...state,
-        theme: action.payload,
-      }
-    case nav_types.ACTIVE_LINK:
-      return {
-        ...state,
-        activeLink: action.payload,
-      }
-    case nav_types.NAV_TOGGLE:
-      return {
-        ...state,
-        nav_open: action.payload,
-        menu_open: false,
-      }
-    case nav_types.MENU_TOGGLE:
-      return {
-        ...state,
-        menu_open: action.payload,
-        nav_open: false,
-      }
-    default:
-      return {
-        ...state,
-      }
-  }
-}
-export default navReducer
+const navReducer = createSlice({
+  name: 'nav-slice',
+  initialState: {
+    ...nav,
+  },
+  reducers: {
+    theme: (state, action) => {
+      state.theme = action.payload
+    },
+    active_link: (state, action) => {
+      state.activeLink = action.payload
+    },
+    nav_toggle: (state, action) => {
+      state.nav_open = action.payload
+      state.menu_open = false
+    },
+    menu_toggle: (state, action) => {
+      state.menu_open = action.payload
+      state.nav_open = false
+    },
+  },
+})
+
+export const { theme, active_link, nav_toggle, menu_toggle } =
+  navReducer.actions
+export default navReducer.reducer

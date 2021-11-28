@@ -1,6 +1,13 @@
 import { technologies } from '../initialState'
+import { createSlice } from '@reduxjs/toolkit'
 
-const techReducer = (state = technologies, action) => {
-  return state
-}
-export default techReducer
+const techReducer = createSlice({
+  name: 'tech-slice',
+  initialState: [...technologies],
+  reducers: {
+    default: (state) => {
+      state
+    },
+  },
+})
+export default techReducer.reducer

@@ -1,10 +1,15 @@
 import React, { useEffect, memo } from 'react'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import style from 'styles/home.module.scss'
 import { FaMoon, FaSun, FaTimes, FaBars } from 'react-icons/fa'
-import { useRouter } from 'next/router'
 import { useSelector, useDispatch } from 'react-redux'
-import action, { nav_types } from '@/data/store/actions'
+import {
+  theme,
+  menu_toggle,
+  nav_toggle,
+  active_link,
+} from 'data/store/reducers/navReducer'
 
 const Nav = memo(() => {
   const router = useRouter()
@@ -13,13 +18,14 @@ const Nav = memo(() => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(action(nav_types.THEME, localStorage.getItem('theme')))
+    const th = localStorage.getItem('theme')
+    dispatch(theme(th))
   }, [])
 
   useEffect(() => {
-    dispatch(action(nav_types.ACTIVE_LINK, router.pathname))
-    if (navData.nav_open) dispatch(action(nav_types.NAV_TOGGLE, false))
-    if (navData.menu_open) dispatch((nav_types.MENU_TOGGLE, false))
+    dispatch(active_link(router.pathname))
+    if (navData.nav_open) dispatch(nav_toggle(false))
+    if (navData.menu_open) dispatch(menu_toggle(false))
   }, [router.pathname])
 
   const themeSwitch = () => {
@@ -27,21 +33,17 @@ const Nav = memo(() => {
     const val = attr === '' ? 'light' : ''
     document.body.setAttribute('id', val)
     localStorage.setItem('theme', val)
-    dispatch(action(nav_types.THEME, val))
+    dispatch(theme(val))
   }
 
   return (
     <header className={style.nav} data-menu={navData.menu_open ? 'open' : ''}>
       <div data-header-logo>
-        <span
-          onClick={() =>
-            dispatch(action(nav_types.MENU_TOGGLE, !navData.menu_open))
-          }
-        >
+        <span onClick={() => dispatch(menu_toggle(!navData.menu_open))}>
           {navData.menu_open ? <FaTimes /> : <FaBars />}
         </span>
         <h3>
-          <Link href='/'>A.A.MERN</Link>
+          <Link href='/'>AA DEVELOPER</Link>
         </h3>
       </div>
       <ul>
@@ -49,7 +51,7 @@ const Nav = memo(() => {
           <li
             key={id}
             data-active={href === navData.activeLink ? 'active' : ''}
-            onClick={() => dispatch(action(nav_types.ACTIVE_LINK, href))}
+            onClick={() => dispatch(active_link(href))}
           >
             <Link href={href}>{name}</Link>
           </li>

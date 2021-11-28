@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React from 'react'
 import Component from '@/components/Component'
 import Projects from '@/components/Projects'
 import { useSelector } from 'react-redux'
