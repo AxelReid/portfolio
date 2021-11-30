@@ -46,7 +46,6 @@ import RS from 'public/assets/projects/react-store/shopping-cart.jpg'
 export const nav = {
   theme: '',
   activeLink: '',
-  nav_open: false,
   menu_open: false,
   links: [
     {
@@ -215,6 +214,12 @@ export const technologies = [
     type: 'I use',
     techs: [
       {
+        id: 'sdm43g',
+        img: Javascript,
+        title: 'Javascript',
+        desc: 'For complex features on web pages',
+      },
+      {
         id: 'sdw',
         img: HtmlCss,
         title: 'Html, Css',
@@ -223,24 +228,10 @@ export const technologies = [
         y: 50,
       },
       {
-        id: 'sdm43g',
-        img: Javascript,
-        title: 'Javascript',
-        desc: 'For complex features on web pages',
-      },
-      {
         id: 'd23gf',
         img: ReactJs,
         title: 'React JS',
         desc: 'JS front-end UI library for SPA',
-      },
-      {
-        id: 'wfgrvcw',
-        img: ReduxLogo,
-        title: 'Redux',
-        desc: 'State Management tool for Javascript frameworks.',
-        y: 65,
-        className: 'filter -invert',
       },
       {
         id: 'd234gd',
@@ -249,10 +240,25 @@ export const technologies = [
         desc: 'Syntactically awesome style sheets',
       },
       {
+        id: '=-=1s',
+        img: NextJs,
+        title: 'Next JS',
+        desc: 'Full stack web Framework on top of React and Node Js',
+        className: 'filter -invert',
+        y: 45,
+      },
+      {
         id: '090ksl',
         img: Sc,
         title: 'Styled-components',
         desc: 'Css-in-js library',
+      },
+      {
+        id: ',.dw.e',
+        img: Mongodb,
+        title: 'MongoDB',
+        desc: 'Document-oriented NoSQL Database program',
+        className: 'filter -shadow',
       },
       {
         id: ']/s1',
@@ -271,25 +277,25 @@ export const technologies = [
         y: 42,
       },
       {
+        id: 'fwegr',
+        img: TailwindCss,
+        title: 'Tailwind CSS',
+        desc: 'CSS Library to build astounding designs.',
+        y: 40,
+      },
+      {
         id: '3d2cv',
         img: Express,
         title: 'Express JS',
         desc: 'A back end web app framework for Node.js',
       },
       {
-        id: ',.dw.e',
-        img: Mongodb,
-        title: 'MongoDB',
-        desc: 'Document-oriented NoSQL Database program',
-        className: 'filter -shadow',
-      },
-      {
-        id: '=-=1s',
-        img: NextJs,
-        title: 'Next JS',
-        desc: 'Full stack web Framework on top of React and Node Js',
+        id: 'wfgrvcw',
+        img: ReduxLogo,
+        title: 'Redux',
+        desc: 'State Management tool for Javascript frameworks.',
+        y: 65,
         className: 'filter -invert',
-        y: 45,
       },
     ],
   },
@@ -319,25 +325,6 @@ export const technologies = [
     ],
   },
   {
-    type: `I'm learning now`,
-    techs: [
-      {
-        id: 'fwegr',
-        img: TailwindCss,
-        title: 'Tailwind CSS',
-        desc: 'CSS Library to build astounding designs.',
-        y: 40,
-      },
-      {
-        id: '32-4rt3ofl',
-        img: ReactNative,
-        title: 'React Native JS',
-        desc: 'Javscript Framerwork to build native both IOS and Android app.',
-        y: 80,
-      },
-    ],
-  },
-  {
     type: `I'm gonna learn`,
     techs: [
       {
@@ -351,6 +338,13 @@ export const technologies = [
         img: DjangoLogo,
         title: 'Django',
         desc: 'Python Full Stack Web Framework.',
+      },
+      {
+        id: '32-4rt3ofl',
+        img: ReactNative,
+        title: 'React Native JS',
+        desc: 'Javscript Framerwork to build native both IOS and Android app.',
+        y: 80,
       },
     ],
   },

@@ -9,6 +9,10 @@ const Pprojects = () => {
   return (
     <Component title='Projects' desc='A collection of my some projects'>
       <h1 className='mb-10'>Projects</h1>
+      <p>
+        More projects coming soon. Most of my projects are local and i
+        couldn&apos;t take time to sum up them for showcase. Now working on it.
+      </p>
       <Projects projects={projects} />
     </Component>
   )
