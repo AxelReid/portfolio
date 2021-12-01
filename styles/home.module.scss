@@ -211,6 +211,7 @@
       max-width: 250px;
     }
     article {
+      width: 100%;
       position: relative;
       overflow: hidden;
       padding-left: 20px;
@@ -276,9 +277,6 @@
       }
       article {
         padding: 0;
-        p {
-          display: inline-block;
-        }
       }
     }
   }
