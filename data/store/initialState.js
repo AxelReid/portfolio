@@ -26,6 +26,15 @@ import Insta2 from 'public/assets/projects/instagram-clone-mern/insta-mern-2.png
 import Insta3 from 'public/assets/projects/instagram-clone-mern/insta-mern-3.png'
 import Insta4 from 'public/assets/projects/instagram-clone-mern/insta-mern-4.png'
 import Insta5 from 'public/assets/projects/instagram-clone-mern/insta-mern-5.png'
+// mern-app
+import Mern1 from 'public/assets/projects/mern-app/1.png'
+import Mern1_2 from 'public/assets/projects/mern-app/1-2.png'
+import Mern1_3 from 'public/assets/projects/mern-app/1-3.png'
+import Mern2 from 'public/assets/projects/mern-app/2.png'
+import Mern2_1 from 'public/assets/projects/mern-app/2-1.png'
+import Mern3 from 'public/assets/projects/mern-app/3.png'
+import Mern3_1 from 'public/assets/projects/mern-app/3-1.png'
+import Mern3_2 from 'public/assets/projects/mern-app/3-2.png'
 // nextjs+framer-motion+sass
 import Fm1 from 'public/assets/projects/next+motion/fm1.png'
 import Fm2 from 'public/assets/projects/next+motion/fm2.png'
@@ -43,6 +52,9 @@ import RPSG from 'public/assets/projects/rps-game/rps-game.png'
 // react store
 import RS from 'public/assets/projects/react-store/shopping-cart.jpg'
 
+const descs = [
+  `There is no live demo but you can clone the source code and try locally. I did not deploy this because i did not want people play around with my database or upload there sensitive things.`,
+]
 export const nav = {
   theme: '',
   activeLink: '',
@@ -150,7 +162,24 @@ export const projects = [
       { id: 'img-4', img: Insta4 },
       { id: 'img-5', img: Insta5 },
     ],
-    desc: 'Full stack instagram clone. There is no live demo but you can clone the source code and try locally. I did not deploy this because i did not want people play around with my database or upload there sensitive things.',
+    desc: 'Full stack instagram clone. ' + descs[0],
+    top: true,
+  },
+  {
+    id: 12,
+    title: 'Full MERN app',
+    link: 'https://github.com/AxelReid/mern-app',
+    imgs: [
+      { id: 'img-12-1', img: Mern1 },
+      { id: 'img-12-2', img: Mern1_2 },
+      { id: 'img-12-3', img: Mern1_3 },
+      { id: 'img-12-4', img: Mern2 },
+      { id: 'img-12-5', img: Mern2_1 },
+      { id: 'img-12-7', img: Mern3 },
+      { id: 'img-12-8', img: Mern3_1 },
+      { id: 'img-12-9', img: Mern3_2 },
+    ],
+    desc: 'Post & Admin Panel mern app. ' + descs[0],
     top: true,
   },
   {
@@ -185,7 +214,6 @@ export const projects = [
       { id: 'img-3', img: PhSItem },
     ],
     desc: 'Built in pure Vanilla Javascript (no third-party libraries)',
-    top: true,
   },
   {
     id: 4,
