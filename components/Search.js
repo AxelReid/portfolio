@@ -45,12 +45,12 @@ const Search = ({ count }) => {
           Results: <b>{count}</b>{' '}
           {text_search && (
             <>
-              for <b>"{text_search}"</b>
+              for <b>&quot;{text_search}&quot;</b>
             </>
           )}{' '}
           {text_filter && (
             <>
-              in <b>"{text_filter}"</b>
+              in <b>&quot;{text_filter}&quot;</b>
             </>
           )}
         </h3>
