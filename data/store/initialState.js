@@ -55,6 +55,9 @@ import RS from 'public/assets/projects/react-store/shopping-cart.jpg'
 const descs = [
   `There is no live demo but you can clone the source code and try locally. I did not deploy this because i did not want people play around with my database or upload there sensitive things.`,
 ]
+
+export const sorts = ['full-stack', 'front-end', 'design only']
+
 export const nav = {
   theme: '',
   activeLink: '',
@@ -164,23 +167,25 @@ export const projects = [
     ],
     desc: 'Full stack instagram clone. ' + descs[0],
     top: true,
+    sort: sorts[0],
   },
   {
     id: 12,
-    title: 'Full MERN app',
+    title: 'Full Stack MERN app (3 themes)',
     link: 'https://github.com/AxelReid/mern-app',
     imgs: [
+      { id: 'img-12-4', img: Mern2 },
+      { id: 'img-12-5', img: Mern2_1 },
       { id: 'img-12-1', img: Mern1 },
       { id: 'img-12-2', img: Mern1_2 },
       { id: 'img-12-3', img: Mern1_3 },
-      { id: 'img-12-4', img: Mern2 },
-      { id: 'img-12-5', img: Mern2_1 },
       { id: 'img-12-7', img: Mern3 },
       { id: 'img-12-8', img: Mern3_1 },
       { id: 'img-12-9', img: Mern3_2 },
     ],
     desc: 'Post & Admin Panel mern app. ' + descs[0],
     top: true,
+    sort: sorts[0],
   },
   {
     id: 1,
@@ -192,6 +197,7 @@ export const projects = [
     ],
     desc: 'Built in React JS, React-router, CSS and heavily relied on Framer-motion. This was my first React project and built it as a resume to showcase my front-end skills.',
     top: true,
+    sort: sorts[1],
   },
   {
     id: 2,
@@ -203,6 +209,7 @@ export const projects = [
     ],
     desc: 'A demonstation of the power of Framer-motion with Next JS',
     top: true,
+    sort: sorts[2],
   },
   {
     id: 3,
@@ -214,6 +221,7 @@ export const projects = [
       { id: 'img-3', img: PhSItem },
     ],
     desc: 'Built in pure Vanilla Javascript (no third-party libraries)',
+    sort: sorts[1],
   },
   {
     id: 4,
@@ -221,6 +229,7 @@ export const projects = [
     link: 'https://axel-js-project-mytalkingtom.netlify.app',
     imgs: [{ id: 'img-1', img: MyTom }],
     desc: 'Built in pure Vanilla Javascript (no third-party libraries).',
+    sort: sorts[1],
   },
   {
     id: 5,
@@ -228,6 +237,7 @@ export const projects = [
     link: 'https://axel-js-project-rps-game.netlify.app',
     imgs: [{ id: 'img-1', img: RPSG }],
     desc: 'A game built in pure Vanilla Javascript (no third-party libraries).',
+    sort: sorts[1],
   },
   {
     id: 6,
@@ -235,6 +245,7 @@ export const projects = [
     link: 'https://axel-react-project-shopping-cart.netlify.app',
     imgs: [{ id: 'img-1', img: RS }],
     desc: 'Built in React JS, React-router, Context API (my second React js APP).',
+    sort: sorts[1],
   },
 ]
 export const technologies = [

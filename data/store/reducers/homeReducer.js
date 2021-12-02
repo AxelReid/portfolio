@@ -7,7 +7,7 @@ const homeReducer = createSlice({
     certifications,
     timeline,
   },
-  reducer: {
+  reducers: {
     default: (state) => {
       state
     },

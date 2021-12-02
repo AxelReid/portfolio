@@ -1,10 +1,13 @@
+import { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import style from 'styles/home.module.scss'
 import Certicifations from '@/components/Certicifations'
 import Component from '@/components/Component'
-import { useSelector } from 'react-redux'
-
+import Timeline from '@/components/Timeline'
+import Projects from '@/components/Projects'
+import { useSelector, useDispatch } from 'react-redux'
+import { top_projects } from '@/data/store/reducers/projectsReducer'
 import {
   Pic,
   Mongodb,
@@ -14,14 +17,14 @@ import {
   NextJs,
 } from 'data/store/initialState'
 
-import Timeline from '@/components/Timeline'
-import Projects from '@/components/Projects'
-
 export default function Home() {
+  const dispatch = useDispatch()
   const data = useSelector((state) => state.home)
-  const someProjects = useSelector((state) =>
-    state.projects.filter((project) => project.top && project)
-  )
+  const someProjects = useSelector((state) => state.projects.top_projects)
+
+  useEffect(() => {
+    dispatch(top_projects())
+  }, [])
 
   return (
     <Component>

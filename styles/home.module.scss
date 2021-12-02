@@ -164,6 +164,57 @@
   }
 }
 
+#projects_sort {
+  position: relative;
+  margin-top: 50px;
+  @include flexBox(center, flex-start);
+  gap: 20px;
+  i {
+    color: var(--color-secondary);
+    position: absolute;
+    left: 5px;
+    font-size: var(--font-middle);
+  }
+  input,
+  select {
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--bg-relative);
+    &,
+    &::placeholder {
+      color: var(--color-secondary);
+      font-size: var(--font-middle);
+    }
+    padding: 10px;
+    outline: none;
+    &:focus {
+      border-color: var(--color-secondary);
+    }
+  }
+  input {
+    flex: 1 0 auto;
+    padding-left: 40px;
+  }
+}
+.search_report {
+  margin: 10px 0;
+  h3 {
+    font-size: var(--font-middle);
+    word-spacing: 2px;
+    b:not(:first-of-type) {
+      font-style: italic;
+    }
+  }
+}
+.no_match {
+  margin-top: 60px;
+  h3 {
+    color: var(--color-secondary);
+    font-style: italic;
+    text-align: center;
+    display: block;
+  }
+}
 #projects {
   position: relative;
   h3 {

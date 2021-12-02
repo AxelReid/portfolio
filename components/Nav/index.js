@@ -12,14 +12,9 @@ const Nav = memo(() => {
   const navData = useSelector((state) => state.nav)
   const dispatch = useDispatch()
 
-  // const set_theme = useCallback((mode) => {
-  //   window.document.all[0].setAttribute('id', mode || '')
-  // }, [])
-
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme')
     dispatch(theme(savedTheme))
-    // set_theme(savedTheme)
     document.body.setAttribute('id', savedTheme || '')
   }, [])
 
@@ -30,17 +25,14 @@ const Nav = memo(() => {
 
   const themeSwitch = () => {
     const attr = document.body.getAttribute('id')
-    // const attr = window.document.all[0].getAttribute('id')
     const val = attr === '' ? 'light' : ''
     document.body.setAttribute('id', val)
-    // set_theme(val)
     localStorage.setItem('theme', val)
     dispatch(theme(val))
   }
 
   return (
     <header
-      // className={navData.menu_open ? 'shadow' : 'shadow card-glass border'}
       className={`shadow ${navData.menu_open ? '' : 'card-glass border'}`}
       id={style.nav}
       data-menu={navData.menu_open ? 'open' : ''}
