@@ -16,17 +16,19 @@ const Search = ({ count }) => {
   return (
     <div>
       <div id={style.projects_sort}>
-        <i>
-          <FaSearch />
-        </i>
-        <input
-          autoComplete='false'
-          type='search'
-          list='project-search'
-          placeholder='Search'
-          value={text_search}
-          onChange={(e) => dispatch(sort_projects(e.target.value))}
-        />
+        <div>
+          <i>
+            <FaSearch />
+          </i>
+          <input
+            autoComplete='false'
+            type='search'
+            list='project-search'
+            placeholder='Search'
+            value={text_search}
+            onChange={(e) => dispatch(sort_projects(e.target.value))}
+          />
+        </div>
         <select
           onChange={(e) =>
             dispatch(

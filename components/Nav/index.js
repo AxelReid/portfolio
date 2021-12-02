@@ -16,7 +16,7 @@ const Nav = memo(() => {
     const savedTheme = localStorage.getItem('theme')
     dispatch(theme(savedTheme))
     document.body.setAttribute('id', savedTheme || '')
-  }, [])
+  }, [dispatch])
 
   useEffect(() => {
     dispatch(active_link(router.pathname))

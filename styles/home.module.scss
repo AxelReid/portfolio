@@ -168,13 +168,8 @@
   position: relative;
   margin-top: 50px;
   @include flexBox(center, flex-start);
-  gap: 20px;
-  i {
-    color: var(--color-secondary);
-    position: absolute;
-    left: 5px;
-    font-size: var(--font-middle);
-  }
+  flex-wrap: wrap;
+  gap: 15px;
   input,
   select {
     background: none;
@@ -191,13 +186,25 @@
       border-color: var(--color-secondary);
     }
   }
-  input {
+  div {
     flex: 1 0 auto;
-    padding-left: 40px;
+    position: relative;
+    i {
+      color: var(--color-secondary);
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: var(--font-middle);
+    }
+    input {
+      width: 100%;
+      padding-left: 40px;
+    }
   }
 }
 .search_report {
-  margin: 10px 0;
+  margin: 15px 0 0 0;
   h3 {
     font-size: var(--font-middle);
     word-spacing: 2px;

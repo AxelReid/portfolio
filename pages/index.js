@@ -24,7 +24,7 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(top_projects())
-  }, [])
+  }, [dispatch])
 
   return (
     <Component>
