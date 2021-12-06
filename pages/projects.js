@@ -11,7 +11,7 @@ const Pprojects = () => {
 
   useEffect(() => {
     dispatch(clear_p_sort())
-  }, [])
+  }, [dispatch])
 
   return (
     <Component title='Projects' desc='A collection of my some projects'>

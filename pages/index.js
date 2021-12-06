@@ -35,14 +35,14 @@ export default function Home() {
             <p>MERN Stack Web Developer, Javascript Engineer</p>
             <p>Senior front-end, middle back-end full stack web developer</p>
           </div>
-          <div data-pic>
+          {/* <div data-pic>
             <Image
               width='150'
               height='150'
               alt='profile image'
               src={Pic}
             ></Image>
-          </div>
+          </div> */}
         </div>
         <div data-walkthrough className='mt-section'>
           <h2 className='mb-10 h2'>Little Timeline</h2>

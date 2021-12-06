@@ -21,7 +21,7 @@ const Nav = memo(() => {
   useEffect(() => {
     dispatch(active_link(router.pathname))
     if (navData.menu_open) dispatch(menu_toggle(false))
-  }, [router.pathname])
+  }, [dispatch, router.pathname])
 
   const themeSwitch = () => {
     const attr = document.body.getAttribute('id')
