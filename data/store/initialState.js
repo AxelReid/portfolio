@@ -17,9 +17,14 @@ import ReduxLogo from 'public/images/redux.png'
 import TailwindCss from 'public/images/tailwind-css.png'
 import PythonLogo from 'public/images/python.png'
 import DjangoLogo from 'public/images/django.png'
+import GoLogo from 'public/images/go.png'
 
 import ProofM001 from 'public/assets/certifications/mongodb/M001_proof_of_completion.jpeg'
 import ProofM220 from 'public/assets/certifications/mongodb/M220JS_proof_of_completion.jpeg'
+
+// twitter clone
+import Twitter1 from 'public/assets/projects/twitter-clone/black.png'
+import Twitter2 from 'public/assets/projects/twitter-clone/white.png'
 // instagram mern clone
 import Insta1 from 'public/assets/projects/instagram-clone-mern/Insta-mern-1.png'
 import Insta2 from 'public/assets/projects/instagram-clone-mern/insta-mern-2.png'
@@ -154,6 +159,18 @@ export const certifications = [
   },
 ]
 export const projects = [
+  {
+    id: 'vrogfejo409ufj',
+    title: 'Twitter Clone',
+    link: 'https://twitter-fullstack-clone.vercel.app',
+    imgs: [
+      { id: 'img-1', img: Twitter1 },
+      { id: 'img-2', img: Twitter2 },
+    ],
+    desc: 'Fully functinal Twitter Full-stack Clone built upon Next.js, Next-auth Firebase v9, Recoil, Tailwind CSS',
+    top: true,
+    sort: sorts[0],
+  },
   {
     id: 11,
     title: 'Instagram Clone (with MERN)',
@@ -384,6 +401,13 @@ export const technologies = [
         title: 'React Native JS',
         desc: 'Javscript Framerwork to build native both IOS and Android app.',
         y: 80,
+      },
+      {
+        id: 'dekfhih',
+        img: GoLogo,
+        title: 'Go',
+        desc: 'Used in networking and infrastructure, a variety of applications like cloud and server side applications, DevOps, command line tools and much more',
+        y: 30,
       },
     ],
   },
