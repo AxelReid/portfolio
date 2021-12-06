@@ -45,7 +45,7 @@ export default function Home() {
           </div>
         </div>
         <div data-walkthrough className='mt-section'>
-          <h2 className='mb-10 h2'>Timeline</h2>
+          <h2 className='mb-10 h2'>Little Timeline</h2>
           <p>Quick demonstration of my programming walkthrough</p>
           <div data-timeline-wrapper className='mt-50'>
             {data.timeline.map((line) => (
@@ -79,7 +79,7 @@ export default function Home() {
         </div>
       </section>
       <section className='mt-section' id={style.someProjects}>
-        <h2 className='mb-10 h2'>Projects</h2>
+        <h2 className='mb-10 h2'>Featured Projects</h2>
         <p>
           To see more project, navigate to{' '}
           <span className='link'>

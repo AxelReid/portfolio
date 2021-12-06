@@ -111,8 +111,8 @@ export const timeline = [
     data: [
       {
         id: 1,
-        title: 'React Js, Framer-motion, Styled-components',
-        desc: 'After mastering pure css and javascript, extended my front-end skill with these modern UI tools.',
+        title: 'React Js and UI Design',
+        desc: 'After mastering pure css and javascript, extended my front-end skill with React.js, Scss,  Framer-motion and Styled-components.',
       },
       {
         id: 2,
@@ -121,23 +121,13 @@ export const timeline = [
       },
       {
         id: 3,
-        title: 'Node Js, Express Js',
-        desc: 'Learned JavScript backend tools and fulfilled my knowledge.',
+        title: 'Node Js, Express Js, MongoDB (MERN STACK)',
+        desc: `Learned MERN STACK Technology and took my web dev skills to the next level.`,
       },
       {
         id: 4,
-        title: 'MongoDB',
-        desc: `I'm in love with this NoSQL database program and have been taking the official courses and so far got a couple of certifications.`,
-      },
-      {
-        id: 5,
         title: 'Next Js',
-        desc: 'My solution for Full Stack Javascript Web Framework.',
-      },
-      {
-        id: 6,
-        title: 'Redux and Performance Optimization.',
-        desc: 'Learned Redux and ways to increase performance of React Apps. My previous state management for React was Context API + Reducer Hook.',
+        desc: 'My current solution for Full Stack Web Framework as a replacement for the MERN.',
       },
     ],
   },
