@@ -1,56 +1,77 @@
-import React, { useEffect, memo, useCallback } from 'react'
+import React, { useEffect, memo, useCallback, useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import style from 'styles/home.module.scss'
 import { FaMoon, FaSun, FaTimes, FaBars } from 'react-icons/fa'
-import { useSelector, useDispatch } from 'react-redux'
-import { theme, menu_toggle, active_link } from 'data/store/reducers/navReducer'
+
+const links = [
+  {
+    id: 0,
+    href: '/blogs',
+    name: 'Blogs',
+  },
+  {
+    id: 1,
+    href: '/projects',
+    name: 'Projects',
+  },
+  {
+    id: 2,
+    href: '/tech',
+    name: 'Technologies',
+  },
+  {
+    id: 3,
+    href: '/about',
+    name: 'About',
+  },
+]
 
 const Nav = memo(() => {
   const router = useRouter()
-
-  const navData = useSelector((state) => state.nav)
-  const dispatch = useDispatch()
+  const [theme, setTheme] = useState()
+  const [menuOpen, setOpen] = useState(false)
+  const [activeLink, setLink] = useState('')
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme')
-    dispatch(theme(savedTheme))
+    setTheme(savedTheme)
     document.body.setAttribute('id', savedTheme || '')
-  }, [dispatch])
+  }, [])
 
   useEffect(() => {
-    dispatch(active_link(router.pathname))
-    if (navData.menu_open) dispatch(menu_toggle(false))
-  }, [dispatch, router.pathname])
+    setLink(router.pathname)
+    if (menuOpen) setOpen(false)
+  }, [router.pathname])
 
   const themeSwitch = () => {
     const attr = document.body.getAttribute('id')
     const val = attr === '' ? 'light' : ''
     document.body.setAttribute('id', val)
     localStorage.setItem('theme', val)
-    dispatch(theme(val))
+    setTheme(val)
   }
 
   return (
     <header
-      className={`shadow ${navData.menu_open ? '' : 'card-glass border'}`}
+      className={`shadow ${menuOpen ? '' : 'card-glass border'}`}
       id={style.nav}
-      data-menu={navData.menu_open ? 'open' : ''}
+      data-menu={menuOpen ? 'open' : ''}
     >
       <div data-header-logo>
-        <span onClick={() => dispatch(menu_toggle(!navData.menu_open))}>
-          {navData.menu_open ? <FaTimes /> : <FaBars />}
+        <span onClick={() => setOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </span>
         <h3>
           <Link href='/'>AA DEVELOPER</Link>
         </h3>
       </div>
-      <ul className={navData.menu_open ? 'card-glass border' : ''}>
-        {navData.links.map(({ id, href, name }) => (
+      <ul className={menuOpen ? 'card-glass border' : ''}>
+        {links.map(({ id, href, name }) => (
           <li
             key={id}
-            data-active={href === navData.activeLink ? 'active' : ''}
-            onClick={() => dispatch(active_link(href))}
+            data-active={href === activeLink ? 'active' : ''}
+            onClick={() => setLink(href)}
           >
             <Link href={href}>{name}</Link>
           </li>
@@ -58,7 +79,7 @@ const Nav = memo(() => {
       </ul>
       <aside>
         <button data-name='theme' onClick={themeSwitch}>
-          {navData.theme ? <FaMoon /> : <FaSun />}
+          {theme ? <FaMoon /> : <FaSun />}
         </button>
       </aside>
     </header>

@@ -23,12 +23,14 @@ import ProofM001 from 'public/assets/certifications/mongodb/M001_proof_of_comple
 import ProofM220 from 'public/assets/certifications/mongodb/M220JS_proof_of_completion.jpeg'
 
 // twitter clone
+import InstaV2_1 from 'public/assets/projects/instagram-clone-v2/black.png'
+import InstaV2_2 from 'public/assets/projects/instagram-clone-v2/white.png'
+// twitter clone
 import Twitter1 from 'public/assets/projects/twitter-clone/black.png'
 import Twitter2 from 'public/assets/projects/twitter-clone/white.png'
 // instagram mern clone
 import Insta1 from 'public/assets/projects/instagram-clone-mern/Insta-mern-1.png'
 import Insta2 from 'public/assets/projects/instagram-clone-mern/insta-mern-2.png'
-import Insta3 from 'public/assets/projects/instagram-clone-mern/insta-mern-3.png'
 import Insta4 from 'public/assets/projects/instagram-clone-mern/insta-mern-4.png'
 import Insta5 from 'public/assets/projects/instagram-clone-mern/insta-mern-5.png'
 // mern-app
@@ -63,33 +65,6 @@ const descs = [
 
 export const sorts = ['full-stack', 'front-end', 'design only']
 
-export const nav = {
-  theme: '',
-  activeLink: '',
-  menu_open: false,
-  links: [
-    {
-      id: 0,
-      href: '/blogs',
-      name: 'Blogs',
-    },
-    {
-      id: 1,
-      href: '/projects',
-      name: 'Projects',
-    },
-    {
-      id: 2,
-      href: '/tech',
-      name: 'Technologies',
-    },
-    {
-      id: 3,
-      href: '/about',
-      name: 'About',
-    },
-  ],
-}
 export const timeline = [
   {
     year: '2019 - 2020',
@@ -148,7 +123,20 @@ export const certifications = [
     link: 'https://university.mongodb.com/course_completion/e6bba0a8-2761-419f-837e-758b5f64217f',
   },
 ]
+
 export const projects = [
+  {
+    id: 'md3eincwjhui',
+    title: 'Instagram Clone V2',
+    link: 'https://instagram-fullstack-clone.vercel.app',
+    imgs: [
+      { id: 'img-1', img: InstaV2_1 },
+      { id: 'img-2', img: InstaV2_2 },
+    ],
+    desc: 'Fully functional Instagram Full-stack Clone built upon Next.js, Next-auth Firebase v9, Recoil, Tailwind CSS',
+    top: true,
+    sort: sorts[0],
+  },
   {
     id: 'vrogfejo409ufj',
     title: 'Twitter Clone',
@@ -157,7 +145,7 @@ export const projects = [
       { id: 'img-1', img: Twitter1 },
       { id: 'img-2', img: Twitter2 },
     ],
-    desc: 'Fully functinal Twitter Full-stack Clone built upon Next.js, Next-auth Firebase v9, Recoil, Tailwind CSS',
+    desc: 'Fully functional Twitter Full-stack Clone built upon Next.js, Next-auth Firebase v9, Recoil, Tailwind CSS',
     top: true,
     sort: sorts[0],
   },
@@ -168,7 +156,6 @@ export const projects = [
     imgs: [
       { id: 'img-1', img: Insta1 },
       { id: 'img-2', img: Insta2 },
-      { id: 'img-3', img: Insta3 },
       { id: 'img-4', img: Insta4 },
       { id: 'img-5', img: Insta5 },
     ],
@@ -190,7 +177,9 @@ export const projects = [
       { id: 'img-12-8', img: Mern3_1 },
       { id: 'img-12-9', img: Mern3_2 },
     ],
-    desc: 'Post & Admin Panel mern app. ' + descs[0],
+    desc:
+      'Creative design and idea of Posts & Admin page full stack mern app built from scratch. ' +
+      descs[0],
     top: true,
     sort: sorts[0],
   },
@@ -203,7 +192,6 @@ export const projects = [
       { id: 'img-2', img: Port2 },
     ],
     desc: 'Built in React JS, React-router, CSS and heavily relied on Framer-motion. This was my first React project and built it as a resume to showcase my front-end skills.',
-    top: true,
     sort: sorts[1],
   },
   {
@@ -215,7 +203,6 @@ export const projects = [
       { id: 'img-2', img: Fm2 },
     ],
     desc: 'A demonstation of the power of Framer-motion with Next JS',
-    top: true,
     sort: sorts[2],
   },
   {
