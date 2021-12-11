@@ -63,7 +63,7 @@ const Nav = memo(() => {
           {menuOpen ? <FaTimes /> : <FaBars />}
         </span>
         <h3>
-          <Link href='/'>AA DEVELOPER</Link>
+          <Link href='/'>A++</Link>
         </h3>
       </div>
       <ul className={menuOpen ? 'card-glass border' : ''}>

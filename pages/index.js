@@ -32,8 +32,8 @@ export default function Home() {
         <div data-user>
           <div data-userinfo>
             <h1 className='big-title'>Asilbek Anvarbekov</h1>
-            <p>MERN Stack Web Developer, Javascript Engineer</p>
-            <p>Senior front-end, middle back-end full stack web developer</p>
+            <p>Full Stack Web Developer, Javascript Engineer</p>
+            <p>Middle front-end, Junior back-end</p>
           </div>
           {/* <div data-pic>
             <Image

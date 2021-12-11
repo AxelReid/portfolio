@@ -19,8 +19,9 @@ import PythonLogo from 'public/images/python.png'
 import DjangoLogo from 'public/images/django.png'
 import GoLogo from 'public/images/go.png'
 
-import ProofM001 from 'public/assets/certifications/mongodb/M001_proof_of_completion.jpeg'
-import ProofM220 from 'public/assets/certifications/mongodb/M220JS_proof_of_completion.jpeg'
+import ProofM001 from 'public/assets/certifications/M001_proof_of_completion.jpeg'
+import ProofM220 from 'public/assets/certifications/M220JS_proof_of_completion.jpeg'
+import HackerRank_react_basics from 'public/assets/certifications/hackerrank_react-basics.png'
 
 // twitter clone
 import InstaV2_1 from 'public/assets/projects/instagram-clone-v2/black.png'
@@ -112,15 +113,22 @@ export const certifications = [
     id: 0,
     image: ProofM001,
     width: 500,
-    height: 380,
+    height: 395,
     link: 'https://university.mongodb.com/course_completion/814b5a40-5476-4a32-9a80-6f6ea696d1db',
   },
   {
     id: 1,
     image: ProofM220,
     width: 500,
-    height: 380,
+    height: 395,
     link: 'https://university.mongodb.com/course_completion/e6bba0a8-2761-419f-837e-758b5f64217f',
+  },
+  {
+    id: 2,
+    image: HackerRank_react_basics,
+    width: 500,
+    height: 374,
+    link: 'https://www.hackerrank.com/certificates/d4f46c20e911',
   },
 ]
 

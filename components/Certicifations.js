@@ -16,6 +16,8 @@ const Certicifations = ({ certifications }) => {
               height={height}
               layout='responsive'
               placeholder='blur'
+              objectFit='contain'
+              objectPosition='left top'
               alt='image'
             />
           </div>
