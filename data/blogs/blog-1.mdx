@@ -23,3 +23,44 @@ So, now suppose you have html css and vanilla JavaScript mastered. Then, what te
 and also you must learn one of them. As everyone, ican't say there is only one which is the best, because all of them are the best of now and have pros and cons and whichever you choose depends on what you want from them. And if you are someone now who was actually going to learn one of these JavaScript libraries but don't know which to learn, i highly recommend to go through all of them and learn what they actually are and differences between them, you can 100 seconds of React.
 
 If not enough learn a bit deeper, you can watch an hour or long tutorial on YouTube which i learned.
+
+<br />
+<hr />
+
+# Testing
+
+```jsx
+import all_links from 'config/links'
+import { useRouter } from 'next/router'
+
+const findPathObj = (path, links) => {
+  let result = null
+  for (const item of links) {
+    if (item.link?.pathname === (path?.includes('/') ? path : '/' + path))
+      result = item
+    if (item.sublinks) result = findPathObj(path, item.sublinks)
+    if (result) break
+  }
+  return result
+}
+
+export const findPageName = (path = current_path(), links = all_links) => {
+  return findPathObj(path, links)?.title
+}
+
+export const findBreadcrumb = (paths, links) =>
+  paths.map(
+    (path) => findPathObj(path, links) || { title: document.title, link: null }
+  )
+
+export const current_path = () => {
+  const router = useRouter()
+  const splitted = router.pathname
+    .split('/')
+    .filter(
+      (sp) =>
+        sp !== '' && sp !== 'en' && sp !== 'ru' && sp !== 'uz' && sp !== 'oz'
+    )
+  return splitted[splitted.length - 1]
+}
+```

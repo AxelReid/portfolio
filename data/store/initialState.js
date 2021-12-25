@@ -23,6 +23,8 @@ import ProofM001 from 'public/assets/certifications/M001_proof_of_completion.jpe
 import ProofM220 from 'public/assets/certifications/M220JS_proof_of_completion.jpeg'
 import HackerRank_react_basics from 'public/assets/certifications/hackerrank_react-basics.png'
 
+// mirobod tumani
+import MirobodTumani from 'public/assets/projects/mirobod-tumani/mirobod-tumani.png'
 // twitter clone
 import InstaV2_1 from 'public/assets/projects/instagram-clone-v2/black.png'
 import InstaV2_2 from 'public/assets/projects/instagram-clone-v2/white.png'
@@ -133,6 +135,15 @@ export const certifications = [
 ]
 
 export const projects = [
+  {
+    id: 'r151[]1`!^&*p5',
+    title: 'Tashkent Mirobod Region Site',
+    link: 'https://mirobod-tumani.vercel.app',
+    imgs: [{ id: 'img-1', img: MirobodTumani }],
+    desc: 'Built in Nextjs, Tailwind CSS',
+    top: true,
+    sort: sorts[0],
+  },
   {
     id: 'md3eincwjhui',
     title: 'Instagram Clone V2',
